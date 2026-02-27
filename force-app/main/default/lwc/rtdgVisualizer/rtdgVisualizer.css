@@ -1,0 +1,23 @@
+.visualizer-container {
+    padding: 1rem;
+}
+
+.result-container {
+    background-color: #f3f3f3;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.result-content {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #080707;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    border-left: 3px solid #0176d3;
+}

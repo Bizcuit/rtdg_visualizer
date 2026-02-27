@@ -1,0 +1,57 @@
+<template>
+    <div class="visualizer-container">
+        <lightning-card title={componentTitle} icon-name="custom:custom63">
+            <div class="slds-p-around_medium">
+                <!-- Execute Button -->
+                <div class="slds-m-bottom_medium">
+                    <lightning-button
+                        label="Execute Flow"
+                        variant="brand"
+                        onclick={handleExecuteClick}
+                        disabled={isLoading}>
+                    </lightning-button>
+                </div>
+
+                <!-- Loading Spinner -->
+                <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </template>
+
+                <!-- Error Message -->
+                <template if:true={hasError}>
+                    <div class="slds-m-bottom_medium">
+                        <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                            <span class="slds-assistive-text">error</span>
+                            <h2>{error}</h2>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Flow Result -->
+                <template if:true={hasResult}>
+                    <div class="result-container">
+                        <div class="result-content">
+                            {flowResult}
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Configuration Info (for debugging) -->
+                <template if:false={hasResult}>
+                    <template if:false={hasError}>
+                        <template if:false={isLoading}>
+                            <div class="slds-text-color_weak">
+                                <p class="slds-m-bottom_x-small">Flow: <strong>{flowApiName}</strong></p>
+                                <p class="slds-m-bottom_x-small">Data Graph: <strong>{dataGraphName}</strong></p>
+                                <p class="slds-m-bottom_x-small">Output Variable: <strong>{outputVariableName}</strong></p>
+                                <template if:true={lookupKey}>
+                                    <p>Lookup Key: <strong>{lookupKey}</strong></p>
+                                </template>
+                            </div>
+                        </template>
+                    </template>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>
