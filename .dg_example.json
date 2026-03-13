@@ -1,0 +1,1333 @@
+{
+  "ssot__Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+  "Community_Member__c": "",
+  "ssot__CreatedDate__c": "2024-08-28T14:14:31.000Z",
+  "ssot__FirstName__c": "Remi",
+  "ssot__IsAnonymous__c": "0",
+  "ssot__LastModifiedDate__c": "2024-08-28T14:14:31.000Z",
+  "ssot__LastName__c": "Miah",
+  "ssot__PersonName__c": "Remi Miah",
+  "ssot__Salutation__c": "",
+  "ssot__TitleName__c": "",
+  "Category_Interest__c": "",
+  "RT_Purchases_By_Product__cio": [],
+  "RT_Interactions_By_Product__cio": [
+    {
+      "interactioncount__c": 24,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "interactionname__c": "View Catalog Object",
+      "productid__c": "a001Q000018okClQAI"
+    },
+    {
+      "interactioncount__c": 20,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "interactionname__c": "View Catalog Object",
+      "productid__c": "1010722"
+    },
+    {
+      "interactioncount__c": 0,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    }
+  ],
+  "RT_Interactions_By_Category__cio": [
+    {
+      "interactionscount__c": 5,
+      "categoryid__c": "rainwear",
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    },
+    {
+      "interactionscount__c": 5,
+      "categoryid__c": "jackets & vests",
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    },
+    {
+      "interactionscount__c": 5,
+      "categoryid__c": "men|jackets & vests|rainwear",
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    },
+    {
+      "interactionscount__c": 5,
+      "categoryid__c": "men",
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    },
+    {
+      "interactionscount__c": 0,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    }
+  ],
+  "test_rt_insight_c__cio": [
+    {
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "abc123__c": 20
+    }
+  ],
+  "TestRTCI__cio": [
+    {
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "zipcode__c": "",
+      "count__c": 61
+    }
+  ],
+  "ar_rt_ci_test__cio": [
+    {
+      "test__c": 2,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    }
+  ],
+  "IdentitiesByDataSource__cio": [
+    {
+      "datasource__c": "Demo_Mobile_App_identity_29CC048",
+      "countofidentities__c": 0,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    },
+    {
+      "datasource__c": "Salesforce_00D1Q000001fdJS",
+      "countofidentities__c": 1,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    },
+    {
+      "datasource__c": "NTO_Website_identity_B6AA528",
+      "countofidentities__c": 1,
+      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+    }
+  ],
+  "IndividualIdentityLink__dlm": [
+    {
+      "SourceRecordId__c": "123454321",
+      "UnifiedRecordId__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "PriorityBucket__c": 5,
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "123454321",
+          "ssot__IsAnonymous__c": "0",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "123454321",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "remi.miah@test.com",
+              "ssot__PartyId__c": "123454321"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "003Ws000003MLfBIAW",
+      "UnifiedRecordId__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "ssot__DataSourceObjectId__c": "Contact",
+      "ssot__DataSourceId__c": "Salesforce_00D1Q000001fdJS",
+      "PriorityBucket__c": 5,
+      "ssot__Individual__dlm": [
+        {
+          "Community_Member__c": "",
+          "ssot__DataSourceId__c": "Salesforce_00D1Q000001fdJS",
+          "ssot__Id__c": "003Ws000003MLfBIAW",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "003Ws000003MLfBIAW",
+              "ssot__DataSourceId__c": "Salesforce_00D1Q000001fdJS",
+              "ssot__EmailAddress__c": "remi.miah@test.com",
+              "ssot__LastModifiedDate__c": "2024-08-28T14:14:31.000Z",
+              "ssot__PartyId__c": "003Ws000003MLfBIAW"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "eb7fb0b579815378",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "eb7fb0b579815378",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "eb7fb0b579815378",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "eb7fb0b579815378"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "daf440d408c70f74",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "daf440d408c70f74",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "daf440d408c70f74",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "daf440d408c70f74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "d183b9fa2b2d3eee",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "d183b9fa2b2d3eee",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "d183b9fa2b2d3eee",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "d183b9fa2b2d3eee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "cdae8bbb9c3061b3",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "cdae8bbb9c3061b3",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "cdae8bbb9c3061b3",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "cdae8bbb9c3061b3"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T12:01:13.349Z",
+              "ssot__Id__c": "4ec57ef1-c508-43eb-aa78-89e0ce98f4d4",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T12:01:13.349Z",
+              "ssot__Id__c": "46e6204b-87f9-4c4d-9e4e-5139fd512865",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T12:01:13.349Z",
+              "ssot__Id__c": "27963076-a5c6-40f7-b09a-c22193ebe886:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T12:01:13.349Z",
+              "ssot__Id__c": "27963076-a5c6-40f7-b09a-c22193ebe886:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T12:01:13.349Z",
+              "ssot__Id__c": "27963076-a5c6-40f7-b09a-c22193ebe886:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T12:01:13.349Z",
+              "ssot__Id__c": "27963076-a5c6-40f7-b09a-c22193ebe886:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T11:59:19.064Z",
+              "ssot__Id__c": "cc658a15-b57f-44eb-b256-8133eeedacf9:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T11:59:19.064Z",
+              "ssot__Id__c": "cc658a15-b57f-44eb-b256-8133eeedacf9:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T11:59:19.064Z",
+              "ssot__Id__c": "cc658a15-b57f-44eb-b256-8133eeedacf9:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "cdae8bbb9c3061b3",
+              "ssot__RequestDateTime__c": "2026-03-10T11:59:19.064Z",
+              "ssot__Id__c": "cc658a15-b57f-44eb-b256-8133eeedacf9:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "ca40fb8700f9367f",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "ca40fb8700f9367f",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "ca40fb8700f9367f",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "ca40fb8700f9367f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "b8e5b572536121fc",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "b8e5b572536121fc",
+          "ssot__IsAnonymous__c": "0",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "b8e5b572536121fc",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "b8e5b572536121fc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "a2e26f77e39ade68",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "a2e26f77e39ade68",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "a2e26f77e39ade68",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "a2e26f77e39ade68"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T12:50:55.316Z",
+              "ssot__Id__c": "20a0324b-04aa-4073-828c-cb269ee2feab",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T12:50:55.316Z",
+              "ssot__Id__c": "0283b191-8e50-4641-a84f-2d133937e766",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T12:50:55.315Z",
+              "ssot__Id__c": "1302b2e1-4f22-4181-8d75-7efe0e357521:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T12:50:55.315Z",
+              "ssot__Id__c": "1302b2e1-4f22-4181-8d75-7efe0e357521:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T10:48:29.007Z",
+              "ssot__Id__c": "645974df-d58a-4b22-9588-7408181e92ec:1",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T10:48:29.007Z",
+              "ssot__Id__c": "645974df-d58a-4b22-9588-7408181e92ec:0",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T10:48:29.007Z",
+              "ssot__Id__c": "4b9f851b-5ef8-49fb-a06f-f4cb41d43078:3",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T10:48:29.007Z",
+              "ssot__Id__c": "4b9f851b-5ef8-49fb-a06f-f4cb41d43078:2",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T10:48:29.007Z",
+              "ssot__Id__c": "4b9f851b-5ef8-49fb-a06f-f4cb41d43078:1",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            },
+            {
+              "ssot__IndividualId__c": "a2e26f77e39ade68",
+              "ssot__RequestDateTime__c": "2026-03-10T10:48:29.007Z",
+              "ssot__Id__c": "4b9f851b-5ef8-49fb-a06f-f4cb41d43078:0",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "B1C192AC-987F-4BC3-B8F2-5565D5EA54D1",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "Demo_Mobile_App_identity_29CC048",
+      "ssot__DataSourceId__c": "Demo_Mobile_App_identity_29CC048",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "Demo_Mobile_App_identity_29CC048",
+          "ssot__Id__c": "B1C192AC-987F-4BC3-B8F2-5565D5EA54D1",
+          "ssot__IsAnonymous__c": "0",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "B1C192AC-987F-4BC3-B8F2-5565D5EA54D1",
+              "ssot__DataSourceId__c": "Demo_Mobile_App_contactPointEmail_EE657555",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__LastModifiedDate__c": "2025-12-16T17:49:53.920Z",
+              "ssot__PartyId__c": "B1C192AC-987F-4BC3-B8F2-5565D5EA54D1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "9b5bf1e2fc9adfb4",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "9b5bf1e2fc9adfb4",
+          "ssot__IsAnonymous__c": "0",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "9b5bf1e2fc9adfb4",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "9b5bf1e2fc9adfb4"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T22:22:37.734Z",
+              "ssot__Id__c": "781825b6-3a04-48e9-bc6e-25fe39681ed5:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T22:22:37.734Z",
+              "ssot__Id__c": "781825b6-3a04-48e9-bc6e-25fe39681ed5:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T22:22:37.734Z",
+              "ssot__Id__c": "781825b6-3a04-48e9-bc6e-25fe39681ed5:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T22:22:37.734Z",
+              "ssot__Id__c": "781825b6-3a04-48e9-bc6e-25fe39681ed5:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T16:28:27.325Z",
+              "ssot__Id__c": "d66c5833-109f-4572-aa2e-d0c91a15cde5:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T16:28:27.325Z",
+              "ssot__Id__c": "d66c5833-109f-4572-aa2e-d0c91a15cde5:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T16:28:27.325Z",
+              "ssot__Id__c": "d66c5833-109f-4572-aa2e-d0c91a15cde5:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T16:28:27.325Z",
+              "ssot__Id__c": "d66c5833-109f-4572-aa2e-d0c91a15cde5:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T15:53:51.663Z",
+              "ssot__Id__c": "f1924f8f-0e64-4984-926a-8bcea439830b:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "9b5bf1e2fc9adfb4",
+              "ssot__RequestDateTime__c": "2026-03-06T15:53:51.663Z",
+              "ssot__Id__c": "f1924f8f-0e64-4984-926a-8bcea439830b:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "936f96116034b66b",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "936f96116034b66b",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "936f96116034b66b",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "936f96116034b66b"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:58:19.484Z",
+              "ssot__Id__c": "81e1f2ba-b640-47af-abf7-8a82f93e45b6:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:58:19.484Z",
+              "ssot__Id__c": "81e1f2ba-b640-47af-abf7-8a82f93e45b6:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:58:19.484Z",
+              "ssot__Id__c": "81e1f2ba-b640-47af-abf7-8a82f93e45b6:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:58:19.484Z",
+              "ssot__Id__c": "81e1f2ba-b640-47af-abf7-8a82f93e45b6:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:58:19.480Z",
+              "ssot__Id__c": "db9bf3be-2037-4ef4-bb74-9d1976094483",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:58:19.480Z",
+              "ssot__Id__c": "c21dd52e-0253-44fa-89d6-86861978b536",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:57:31.098Z",
+              "ssot__Id__c": "69510890-3998-46fd-98e4-3f76f9089506",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:57:31.098Z",
+              "ssot__Id__c": "4b2a7f9c-cac8-4e6a-b757-2f41529b8401:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:57:31.098Z",
+              "ssot__Id__c": "4b2a7f9c-cac8-4e6a-b757-2f41529b8401:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "936f96116034b66b",
+              "ssot__RequestDateTime__c": "2026-03-10T10:57:31.098Z",
+              "ssot__Id__c": "4b2a7f9c-cac8-4e6a-b757-2f41529b8401:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "705952731d1f2ea7",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "705952731d1f2ea7",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "705952731d1f2ea7",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "705952731d1f2ea7"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:25.661Z",
+              "ssot__Id__c": "b0bfdea0-aadf-47ce-8a0a-8e0acb4fb061:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:25.661Z",
+              "ssot__Id__c": "b0bfdea0-aadf-47ce-8a0a-8e0acb4fb061:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:25.661Z",
+              "ssot__Id__c": "b0bfdea0-aadf-47ce-8a0a-8e0acb4fb061:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:25.661Z",
+              "ssot__Id__c": "b0bfdea0-aadf-47ce-8a0a-8e0acb4fb061:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:25.657Z",
+              "ssot__Id__c": "7f716bde-91d7-44ed-9ab5-2c14eaa05f6d",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:25.657Z",
+              "ssot__Id__c": "6726aab7-46b1-4c65-ba31-562bad1eac67",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:09.884Z",
+              "ssot__Id__c": "fca843cb-72df-4df7-883f-6b8e1c2f3477:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:09.884Z",
+              "ssot__Id__c": "fca843cb-72df-4df7-883f-6b8e1c2f3477:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:09.884Z",
+              "ssot__Id__c": "fca843cb-72df-4df7-883f-6b8e1c2f3477:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "705952731d1f2ea7",
+              "ssot__RequestDateTime__c": "2026-03-06T09:21:09.884Z",
+              "ssot__Id__c": "fca843cb-72df-4df7-883f-6b8e1c2f3477:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "6133844701101a29",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "6133844701101a29",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "6133844701101a29",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "6133844701101a29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "4f5e150cb08ea295",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "4f5e150cb08ea295",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "4f5e150cb08ea295",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "4f5e150cb08ea295"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:37.747Z",
+              "ssot__Id__c": "dd9f687c-28c1-421c-b4d9-e4f4ce556745:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:37.747Z",
+              "ssot__Id__c": "dd9f687c-28c1-421c-b4d9-e4f4ce556745:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:37.747Z",
+              "ssot__Id__c": "dd9f687c-28c1-421c-b4d9-e4f4ce556745:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:37.747Z",
+              "ssot__Id__c": "dd9f687c-28c1-421c-b4d9-e4f4ce556745:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:05.235Z",
+              "ssot__Id__c": "a9b6f739-7461-4fe9-bbce-46abfb25b128:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:05.235Z",
+              "ssot__Id__c": "a9b6f739-7461-4fe9-bbce-46abfb25b128:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:05.235Z",
+              "ssot__Id__c": "a9b6f739-7461-4fe9-bbce-46abfb25b128:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T15:52:05.235Z",
+              "ssot__Id__c": "a9b6f739-7461-4fe9-bbce-46abfb25b128:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T03:56:59.929Z",
+              "ssot__Id__c": "b77fd36d-7597-435a-80e8-e90830913f4f:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "4f5e150cb08ea295",
+              "ssot__RequestDateTime__c": "2026-03-10T03:56:59.929Z",
+              "ssot__Id__c": "b77fd36d-7597-435a-80e8-e90830913f4f:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "41cac2f4b1591827",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "41cac2f4b1591827",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "41cac2f4b1591827",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "41cac2f4b1591827"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:14:23.648Z",
+              "ssot__Id__c": "9dc32959-34e9-4fce-9959-d4dddeb49feb",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:14:23.648Z",
+              "ssot__Id__c": "028963a5-e12b-4f97-b0e5-a3dc6d2f3561",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:14:23.640Z",
+              "ssot__Id__c": "97698e98-a66e-4cd1-8e7a-40d50da2ea7a:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:14:23.640Z",
+              "ssot__Id__c": "97698e98-a66e-4cd1-8e7a-40d50da2ea7a:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:14:23.640Z",
+              "ssot__Id__c": "97698e98-a66e-4cd1-8e7a-40d50da2ea7a:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:14:23.640Z",
+              "ssot__Id__c": "97698e98-a66e-4cd1-8e7a-40d50da2ea7a:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:12:24.402Z",
+              "ssot__Id__c": "9dcdc034-c32c-4666-8101-a951bd64f401",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:12:24.402Z",
+              "ssot__Id__c": "4b5c32a2-cda9-4b54-827d-cbda50d5f3f3",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtXQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:12:24.401Z",
+              "ssot__Id__c": "3ee808c7-6473-4dad-8af5-93dc12a2a6f9:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "41cac2f4b1591827",
+              "ssot__RequestDateTime__c": "2026-03-09T15:12:24.401Z",
+              "ssot__Id__c": "3ee808c7-6473-4dad-8af5-93dc12a2a6f9:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "28c0d2984eb99691",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "28c0d2984eb99691",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "28c0d2984eb99691",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "28c0d2984eb99691"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:48:40.146Z",
+              "ssot__Id__c": "7de8e93b-57eb-4baf-90df-9e81bf8fbb97:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:48:40.146Z",
+              "ssot__Id__c": "7de8e93b-57eb-4baf-90df-9e81bf8fbb97:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:48:40.146Z",
+              "ssot__Id__c": "7de8e93b-57eb-4baf-90df-9e81bf8fbb97:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:48:40.146Z",
+              "ssot__Id__c": "7de8e93b-57eb-4baf-90df-9e81bf8fbb97:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:48:40.143Z",
+              "ssot__Id__c": "cf013496-aca8-4ce8-93c6-91d00b392213",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:48:40.143Z",
+              "ssot__Id__c": "5cc65347-f1e1-4d8f-8924-657c46396219",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:43:55.729Z",
+              "ssot__Id__c": "6050474b-afa8-4746-8af4-7b3d538d39c1",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:43:55.728Z",
+              "ssot__Id__c": "a9a9ff55-8947-4489-aff7-f81146ae4a61",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "28c0d2984eb99691",
+              "ssot__RequestDateTime__c": "2026-03-10T11:43:55.728Z",
+              "ssot__Id__c": "453f58ab-26bf-40f0-967a-ff132a1dfcd3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "2413981491cd64fc",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "2413981491cd64fc",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "2413981491cd64fc",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "2413981491cd64fc"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-11T01:47:23.644Z",
+              "ssot__Id__c": "b09c166a-fa95-4efe-8145-a4802d423bd0:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-11T01:47:23.644Z",
+              "ssot__Id__c": "b09c166a-fa95-4efe-8145-a4802d423bd0:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-11T01:47:23.644Z",
+              "ssot__Id__c": "b09c166a-fa95-4efe-8145-a4802d423bd0:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-11T01:47:23.644Z",
+              "ssot__Id__c": "b09c166a-fa95-4efe-8145-a4802d423bd0:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-08T01:27:20.988Z",
+              "ssot__Id__c": "cb6e127a-53e7-425c-b9a4-01c2db2680d2:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-08T01:27:20.988Z",
+              "ssot__Id__c": "cb6e127a-53e7-425c-b9a4-01c2db2680d2:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-08T01:27:20.988Z",
+              "ssot__Id__c": "cb6e127a-53e7-425c-b9a4-01c2db2680d2:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            },
+            {
+              "ssot__IndividualId__c": "2413981491cd64fc",
+              "ssot__RequestDateTime__c": "2026-03-08T01:27:20.988Z",
+              "ssot__Id__c": "cb6e127a-53e7-425c-b9a4-01c2db2680d2:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000SkHIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000DoTIAU"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "13ee40052f8ce9a3",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "13ee40052f8ce9a3",
+          "ssot__IsAnonymous__c": "1",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "13ee40052f8ce9a3",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "sagadzhanov@salesforce.com",
+              "ssot__PartyId__c": "13ee40052f8ce9a3"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:05:09.463Z",
+              "ssot__Id__c": "cc902aad-5933-4386-9fd1-f509ddd68402:3",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:05:09.463Z",
+              "ssot__Id__c": "cc902aad-5933-4386-9fd1-f509ddd68402:2",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:05:09.463Z",
+              "ssot__Id__c": "cc902aad-5933-4386-9fd1-f509ddd68402:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:05:09.463Z",
+              "ssot__Id__c": "cc902aad-5933-4386-9fd1-f509ddd68402:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:05:09.463Z",
+              "ssot__Id__c": "9c3e2424-f6ec-4420-98c0-34c042fc7d6a",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtWQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:05:09.463Z",
+              "ssot__Id__c": "6277a0ac-65ae-48f9-a348-47b647846dfb",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:04:57.611Z",
+              "ssot__Id__c": "4b8d8dff-1414-4170-ab29-8d1605f9e566",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtXQAW",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:04:57.611Z",
+              "ssot__Id__c": "04d2ab11-ef22-4b44-a598-8749f77694fc",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:04:57.608Z",
+              "ssot__Id__c": "d7806633-c45e-407d-a073-ca7297b93db1:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "13ee40052f8ce9a3",
+              "ssot__RequestDateTime__c": "2026-03-06T18:04:57.608Z",
+              "ssot__Id__c": "d7806633-c45e-407d-a073-ca7297b93db1:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceRecordId__c": "0378420dabbac2b1",
+      "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
+      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+      "ssot__Individual__dlm": [
+        {
+          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
+          "ssot__Id__c": "0378420dabbac2b1",
+          "ssot__IsAnonymous__c": "0",
+          "ssot__ContactPointEmail__dlm": [
+            {
+              "ssot__Id__c": "0378420dabbac2b1",
+              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
+              "ssot__EmailAddress__c": "remi.miah@test.com",
+              "ssot__PartyId__c": "0378420dabbac2b1"
+            }
+          ],
+          "ssot__PersonalizationLog__dlm": [
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-13T08:25:41.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
+              "ssot__Id__c": "3058ff12-0212-4408-bc27-09378db01b52",
+              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-13T08:25:41.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtXQAW",
+              "ssot__Id__c": "8c8015f5-532f-468f-a33f-028bd6a96f8e",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:3",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:0",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:1",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
+              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:2",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-11T12:34:07.469Z",
+              "ssot__Id__c": "6d6a465c-2a8b-4e84-bb48-4073d32fcebb:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-11T12:34:07.469Z",
+              "ssot__Id__c": "6d6a465c-2a8b-4e84-bb48-4073d32fcebb:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-11T09:51:39.179Z",
+              "ssot__Id__c": "7df3338f-d43a-42f3-8178-b70774336dcf:1",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            },
+            {
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__RequestDateTime__c": "2026-03-11T09:51:39.179Z",
+              "ssot__Id__c": "7df3338f-d43a-42f3-8178-b70774336dcf:0",
+              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
+              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Individual_Unified_SM_1714394613851__dlm": [
+    {
+      "Delta_Type__c": "new",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs0000004MUz",
+      "Timestamp__c": "2024-09-16T16:17:17.268Z"
+    },
+    {
+      "Delta_Type__c": "existing",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs000000uD7R",
+      "Timestamp__c": "2025-04-27T21:20:33.856Z"
+    },
+    {
+      "Delta_Type__c": "existing",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs000000OLcn",
+      "Timestamp__c": "2024-12-29T22:01:56.666Z"
+    },
+    {
+      "Delta_Type__c": "existing",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs0000004KOL",
+      "Timestamp__c": "2024-09-10T19:47:25.221Z"
+    },
+    {
+      "Delta_Type__c": "existing",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs000001ESof",
+      "Timestamp__c": "2025-12-18T06:24:37.560Z"
+    },
+    {
+      "Delta_Type__c": "existing",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs000000rEGA",
+      "Timestamp__c": "2025-02-18T19:36:07.732Z"
+    },
+    {
+      "Delta_Type__c": "existing",
+      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "Segment_Id__c": "1sgWs000000wtIf",
+      "Timestamp__c": "2025-06-19T19:31:46.133Z"
+    }
+  ]
+}

@@ -1,29 +1,39 @@
 import { LightningElement, api } from 'lwc';
 import executeFlowAndGetOutput from '@salesforce/apex/FlowExecutionController.executeFlowAndGetOutput';
 import getDataSpaceApiName from '@salesforce/apex/DataGraphHelper.getDataSpaceApiName';
+import { renderConfig } from './renderUtils';
 
 export default class RtdgVisualizer extends LightningElement {
     // Configuration parameters
     @api componentConfig;
-    @api selectedFlow;
     @api selectedDataGraph;
     @api lookupKey;
     @api componentTitle = 'RTDG Visualizer';
     @api autoExecute = false;
+    @api recordId; // Current record ID (automatically available on record pages)
+
+    // Static flow API name
+    FLOW_API_NAME = 'dgLookup';
+    FLOW_OUTPUT_VAR = 'output'; // Default output variable name, can be overridden by JSON config
 
     // Component state
     flowResult;
+    htmlResult;
     error;
     isLoading = false;
-    outputVariableName = 'output'; // Default output variable name, can be overridden by JSON config
     config = {};
 
     connectedCallback() {
         this.parseConfig();
 
-        if (this.autoExecute && this.selectedFlow && this.selectedDataGraph && this.outputVariableName) {
+        if (this.autoExecute && this.selectedDataGraph && this.FLOW_OUTPUT_VAR) {
             this.executeFlowHandler();
         }
+    }
+
+    renderedCallback() {
+        const el = this.template.querySelector('.my-class');
+        console.log(el); // Now it exists!
     }
 
     // Parse JSON configuration
@@ -42,8 +52,8 @@ export default class RtdgVisualizer extends LightningElement {
 
     // Execute flow using configured parameters
     async executeFlowHandler() {
-        if (!this.selectedFlow || !this.selectedDataGraph || !this.outputVariableName) {
-            this.error = 'Flow, Data Graph, and output variable name must be configured: ' + this.selectedFlow + ', ' + this.selectedDataGraph + ', ' + this.outputVariableName;
+        if (!this.selectedDataGraph || !this.FLOW_OUTPUT_VAR) {
+            this.error = 'Data Graph and output variable name must be configured: ' + this.selectedDataGraph + ', ' + this.FLOW_OUTPUT_VAR;
             return;
         }
 
@@ -57,32 +67,31 @@ export default class RtdgVisualizer extends LightningElement {
                 dataGraphApiName: this.selectedDataGraph
             });
 
-            console.log('DataSpace API Name:', dataSpaceApiName);
-            console.log('Selected Data Graph:', this.selectedDataGraph);
-            console.log('Lookup Key:', this.lookupKey);
-
             // Prepare input variables for the flow
             const inputVariables = {
                 dataspace: dataSpaceApiName,
                 dgName: this.selectedDataGraph,
-                dgLookupKey: this.lookupKey
+                dgLookupKey: this.lookupKey.replace("RECORD_ID", this.recordId)
             };
+
+            console.log('Input variables being passed to flow:', JSON.stringify(inputVariables));
 
             // Execute the flow with the dataspace as input
             this.flowResult = await executeFlowAndGetOutput({
-                flowApiName: this.selectedFlow,
-                outputVariableName: this.outputVariableName,
+                flowApiName: this.FLOW_API_NAME,
+                outputVariableName: this.FLOW_OUTPUT_VAR,
                 inputVariables: inputVariables
             });
+            
 
-            if(this.flowResult){
-                this.flowResult = JSON.stringify(JSON.parse(this.flowResult), null, 2); // Pretty print JSON result
-            }
-
-            console.log('Flow result:', this.flowResult);
+            if(!this.flowResult) return "";
+           
+            const profile = JSON.parse(this.flowResult)?.[0];
+            
+            this.htmlResult = await renderConfig(profile);
+            this.template.querySelector('.container').innerHTML = this.htmlResult;
         } catch (error) {
-            this.error = error.body?.message || 'An error occurred while executing the flow';
-            console.error('Error executing flow:', error);
+            this.errorMessage = error.body?.message || error.message || 'An error occurred while executing the flow';
         } finally {
             this.isLoading = false;
         }
@@ -101,7 +110,7 @@ export default class RtdgVisualizer extends LightningElement {
     }
 
     get flowApiName() {
-        return this.selectedFlow || 'Not configured';
+        return this.FLOW_API_NAME || 'Not configured';
     }
 
     get dataGraphName() {
@@ -109,6 +118,6 @@ export default class RtdgVisualizer extends LightningElement {
     }
 
     get outputVariableName() {
-        return this.outputVariableName || 'Not configured';
+        return this.FLOW_OUTPUT_VAR || 'Not configured';
     }
 }

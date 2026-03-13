@@ -12,16 +12,12 @@
             <property name="componentConfig" type="String" label="Component Config"
                       description="JSON configuration for the component (e.g., {&quot;outputVariableName&quot;: &quot;result&quot;})"
                       required="true"/>
-            <property name="selectedFlow" type="String" label="Select Flow"
-                      description="Select the Salesforce Flow to execute"
-                      datasource="apex://FlowPicklist"
-                      required="true"/>
             <property name="selectedDataGraph" type="String" label="Select Data Graph"
                       description="Select the Real-Time Data Graph to use"
                       datasource="apex://DataGraphPicklist"
                       required="true"/>
             <property name="lookupKey" type="String" label="Lookup Key"
-                      description="Lookup key value to pass to the flow"/>
+                      description="Lookup key value to pass to the flow. Use {!record_id} as a placeholder for the current record ID."/>
             <property name="componentTitle" type="String" label="Component Title"
                       description="Title to display at the top of the component"
                       default="RTDG Visualizer"/>

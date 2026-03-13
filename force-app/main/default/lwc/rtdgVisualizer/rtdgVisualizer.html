@@ -27,30 +27,7 @@
                     </div>
                 </template>
 
-                <!-- Flow Result -->
-                <template if:true={hasResult}>
-                    <div class="result-container">
-                        <div class="result-content">
-                            {flowResult}
-                        </div>
-                    </div>
-                </template>
-
-                <!-- Configuration Info (for debugging) -->
-                <template if:false={hasResult}>
-                    <template if:false={hasError}>
-                        <template if:false={isLoading}>
-                            <div class="slds-text-color_weak">
-                                <p class="slds-m-bottom_x-small">Flow: <strong>{flowApiName}</strong></p>
-                                <p class="slds-m-bottom_x-small">Data Graph: <strong>{dataGraphName}</strong></p>
-                                <p class="slds-m-bottom_x-small">Output Variable: <strong>{outputVariableName}</strong></p>
-                                <template if:true={lookupKey}>
-                                    <p>Lookup Key: <strong>{lookupKey}</strong></p>
-                                </template>
-                            </div>
-                        </template>
-                    </template>
-                </template>
+                <div class="container" lwc:dom="manual"></div>
             </div>
         </lightning-card>
     </div>
