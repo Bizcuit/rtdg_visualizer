@@ -1,7 +1,7 @@
 /**
  * Utility functions for rendering different types of content in the RTDG Visualizer component
  */
- import getSegmentName from '@salesforce/apex/DataCloudSegmentHelper.getSegmentName';
+import getSegmentName from '@salesforce/apex/DataCloudSegmentHelper.getSegmentName';
 
 const testConfig = [
     {
@@ -53,32 +53,28 @@ const testConfig = [
             }
         ]
     },
+
     {
-        "type": "array",
-        "path": "IndividualIdentityLink__dlm.ssot__Individual__dlm.ssot__ContactPointEmail__dlm",
-        "attributes": [
+        "type": "engagement",
+        "items": [
             {
-                "label": "Email",
-                "path": "ssot__EmailAddress__c"
-            }
-        ]
-    },
-    {
-        "type": "array",
-        "path": "RT_Interactions_By_Product__cio",
-        "attributes": [
-            {
-                "label": "Interaction Count",
-                "path": "interactioncount__c"
+                "label": "Product Browse",
+                "path": "IndividualIdentityLink__dlm.ssot__Individual__dlm.ssot__ProductBrowseEngagement__dlm",
+                "fields": {
+                    "timestamp": "ssot__EngagementDateTm__c",
+                    "title": "ssot__EngagementChannelActionId__c",
+                    "detail": "ssot__ProductId__c"
+                }
             },
             {
-                "label": "Interaction Name",
-                "path": "interactionname__c"
+                "label": "Category Browse",
+                "path": "IndividualIdentityLink__dlm.ssot__Individual__dlm.CategoryBrowseEngagement__dlm",
+                "fields": {
+                    "timestamp": "CreatedDate__c",
+                    "title": "CategoryId__c",
+                    "detail": "EngagementType__c"
+                }
             },
-            {
-                "label": "Product ID",
-                "path": "productid__c"
-            }
         ]
     }
 ];
@@ -104,15 +100,97 @@ function getNodesByPath(obj, path) {
     return currentNodes;
 }
 
+export function renderEngagement(profile, engagementConfig) {
+    let allRows = [];
+
+    for (const item of engagementConfig.items) {
+        const rows = getNodesByPath(profile, item.path);
+
+        allRows.push(...rows.map(row => {
+            const timestamp = row[item.fields.timestamp];
+            const title = row[item.fields.title];
+            const detail = row[item.fields.detail];
+            const label = item.label;
+
+            return { timestamp, title, detail, label };
+        }));
+    }
+
+    // Sort all rows by timestamp
+    allRows.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+    console.log('Engagement rows to render:', allRows);
+
+    // Render the engagements in a timeline format
+    let html = `
+        <h3 class="slds-text-heading_small slds-m-bottom_medium"><strong>Engagement Timeline</strong></h3>
+        <ul class="slds-timeline slds-m-bottom_medium">`;
+
+
+    for (const row of allRows) {
+        html += `
+        <li>
+            <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                <span class="slds-assistive-text">task</span>
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <button class="slds-button slds-button_icon"
+                            title="Toggle details for Review proposals for EBC deck with larger team and have marketing review this"
+                            aria-controls="task-item-base-65">
+                            <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                            </svg>
+                            <span class="slds-assistive-text">${row.label}: ${row.title}</span>
+                        </button>
+                        <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon" title="task">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-grid slds-grid_align-spread">
+                            <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+
+                                <h3 class="slds-truncate">
+                                    <strong>${row.label}:</strong> ${row.title}
+                                </h3>
+
+                            </div>
+                            <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                <p class="slds-timeline__date">${row.timestamp}</p>
+                            </div>
+                        </div>
+                        <p class="">
+                            ${row.detail}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </li>        
+        `
+    }
+
+    html += `</ul>`;
+
+    return html;
+}
+
 export async function renderConfig(profile, config = testConfig) {
     if (!config || config.length === 0) config = testConfig;//return ""
 
     let html = "";
 
-    for(const item of config) {
+    for (const item of config) {
 
         if (item.type === 'separator') {
             html += `<hr class="slds-m-vertical_large"/>`;
+            continue;
+        }
+
+        if (item.type === 'engagement') {
+            html += renderEngagement(profile, item);
             continue;
         }
 
@@ -128,12 +206,14 @@ export async function renderConfig(profile, config = testConfig) {
             continue;
         }
 
+
+
         if (item.type === 'table') {
             html += renderTable(rows, item.columns, item.sectionLabel);
             continue;
         }
 
-        if(item.type === 'segments') {
+        if (item.type === 'segments') {
             html += await renderSegments(rows, item.sectionLabel);
             continue;
         }

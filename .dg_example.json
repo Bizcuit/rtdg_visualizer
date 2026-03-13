@@ -1,142 +1,113 @@
 {
-  "ssot__Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+  "ssot__Id__c": "c29ac236bc95ba4bfad8b90ab33560a2",
   "Community_Member__c": "",
-  "ssot__CreatedDate__c": "2024-08-28T14:14:31.000Z",
-  "ssot__FirstName__c": "Remi",
   "ssot__IsAnonymous__c": "0",
-  "ssot__LastModifiedDate__c": "2024-08-28T14:14:31.000Z",
-  "ssot__LastName__c": "Miah",
-  "ssot__PersonName__c": "Remi Miah",
+  "ssot__PersonName__c": "",
   "ssot__Salutation__c": "",
   "ssot__TitleName__c": "",
   "Category_Interest__c": "",
-  "RT_Purchases_By_Product__cio": [],
+  "RT_Purchases_By_Product__cio": [
+    {
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    }
+  ],
   "RT_Interactions_By_Product__cio": [
     {
-      "interactioncount__c": 24,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "interactionname__c": "View Catalog Object",
-      "productid__c": "a001Q000018okClQAI"
+      "interactioncount__c": 0,
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     },
     {
       "interactioncount__c": 20,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2",
       "interactionname__c": "View Catalog Object",
       "productid__c": "1010722"
     },
     {
-      "interactioncount__c": 0,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "interactioncount__c": 1,
+      "productid__c": "3010499",
+      "interactionname__c": "View Catalog Object",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    },
+    {
+      "interactioncount__c": 1,
+      "productid__c": "1010756",
+      "interactionname__c": "View Catalog Object",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     }
   ],
   "RT_Interactions_By_Category__cio": [
     {
       "interactionscount__c": 5,
-      "categoryid__c": "rainwear",
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
-    },
-    {
-      "interactionscount__c": 5,
-      "categoryid__c": "jackets & vests",
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
-    },
-    {
-      "interactionscount__c": 5,
       "categoryid__c": "men|jackets & vests|rainwear",
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    },
+    {
+      "interactionscount__c": 0,
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     },
     {
       "interactionscount__c": 5,
       "categoryid__c": "men",
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     },
     {
-      "interactionscount__c": 0,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "interactionscount__c": 5,
+      "categoryid__c": "rainwear",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    },
+    {
+      "interactionscount__c": 5,
+      "categoryid__c": "jackets & vests",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    },
+    {
+      "categoryid__c": "kids|toddlers",
+      "interactionscount__c": 1,
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    },
+    {
+      "categoryid__c": "toddlers",
+      "interactionscount__c": 1,
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    },
+    {
+      "categoryid__c": "kids",
+      "interactionscount__c": 1,
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     }
   ],
   "test_rt_insight_c__cio": [
     {
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "abc123__c": 20
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2",
+      "abc123__c": 19
     }
   ],
   "TestRTCI__cio": [
     {
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2",
       "zipcode__c": "",
-      "count__c": 61
+      "count__c": 37
     }
   ],
   "ar_rt_ci_test__cio": [
     {
-      "test__c": 2,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "test__c": 1,
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     }
   ],
   "IdentitiesByDataSource__cio": [
     {
       "datasource__c": "Demo_Mobile_App_identity_29CC048",
       "countofidentities__c": 0,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
-    },
-    {
-      "datasource__c": "Salesforce_00D1Q000001fdJS",
-      "countofidentities__c": 1,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     },
     {
       "datasource__c": "NTO_Website_identity_B6AA528",
       "countofidentities__c": 1,
-      "data_graph_dimension__c": "0edc8b6f91bc1000e8b0a23298ea1fa0"
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     }
   ],
   "IndividualIdentityLink__dlm": [
-    {
-      "SourceRecordId__c": "123454321",
-      "UnifiedRecordId__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "ssot__DataSourceObjectId__c": "NTO_Website_identity_B6AA528",
-      "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
-      "PriorityBucket__c": 5,
-      "ssot__Individual__dlm": [
-        {
-          "ssot__DataSourceId__c": "NTO_Website_identity_B6AA528",
-          "ssot__Id__c": "123454321",
-          "ssot__IsAnonymous__c": "0",
-          "ssot__ContactPointEmail__dlm": [
-            {
-              "ssot__Id__c": "123454321",
-              "ssot__DataSourceId__c": "NTO_Website_contactPointEmail_B6AA4F3",
-              "ssot__EmailAddress__c": "remi.miah@test.com",
-              "ssot__PartyId__c": "123454321"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "SourceRecordId__c": "003Ws000003MLfBIAW",
-      "UnifiedRecordId__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "ssot__DataSourceObjectId__c": "Contact",
-      "ssot__DataSourceId__c": "Salesforce_00D1Q000001fdJS",
-      "PriorityBucket__c": 5,
-      "ssot__Individual__dlm": [
-        {
-          "Community_Member__c": "",
-          "ssot__DataSourceId__c": "Salesforce_00D1Q000001fdJS",
-          "ssot__Id__c": "003Ws000003MLfBIAW",
-          "ssot__ContactPointEmail__dlm": [
-            {
-              "ssot__Id__c": "003Ws000003MLfBIAW",
-              "ssot__DataSourceId__c": "Salesforce_00D1Q000001fdJS",
-              "ssot__EmailAddress__c": "remi.miah@test.com",
-              "ssot__LastModifiedDate__c": "2024-08-28T14:14:31.000Z",
-              "ssot__PartyId__c": "003Ws000003MLfBIAW"
-            }
-          ]
-        }
-      ]
-    },
     {
       "SourceRecordId__c": "eb7fb0b579815378",
       "UnifiedRecordId__c": "c29ac236bc95ba4bfad8b90ab33560a2",
@@ -1213,121 +1184,141 @@
           "ssot__PersonalizationLog__dlm": [
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-13T08:25:41.000Z",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000001EP7IAM",
-              "ssot__Id__c": "3058ff12-0212-4408-bc27-09378db01b52",
-              "ssot__PersonalizationPointId__c": "9ppWs0000000hkvIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:4",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-13T08:25:41.000Z",
-              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtXQAW",
-              "ssot__Id__c": "8c8015f5-532f-468f-a33f-028bd6a96f8e",
-              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtRQAW"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:6",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
-              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:3",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:3",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
-              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:0",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:0",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
-              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:1",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:1",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-12T19:39:36.000Z",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FyLIAU",
-              "ssot__Id__c": "844f9fa0-01ec-4426-842b-3f414d060b93:2",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:5",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-11T12:34:07.469Z",
-              "ssot__Id__c": "6d6a465c-2a8b-4e84-bb48-4073d32fcebb:1",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:22.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "092327c2-baa7-4e46-8510-9384b0c9bf33:2",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-11T12:34:07.469Z",
-              "ssot__Id__c": "6d6a465c-2a8b-4e84-bb48-4073d32fcebb:0",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:16.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "3972dfd9-bf5e-438f-b4a2-b020ecc0448b:4",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-11T09:51:39.179Z",
-              "ssot__Id__c": "7df3338f-d43a-42f3-8178-b70774336dcf:1",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:16.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "3972dfd9-bf5e-438f-b4a2-b020ecc0448b:2",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
             },
             {
               "ssot__IndividualId__c": "0378420dabbac2b1",
-              "ssot__RequestDateTime__c": "2026-03-11T09:51:39.179Z",
-              "ssot__Id__c": "7df3338f-d43a-42f3-8178-b70774336dcf:0",
-              "ssot__PersonalizationDecisionId__c": "9pbWs0000000FwjIAE",
-              "ssot__PersonalizationPointId__c": "9ppWs00000005fdIAA"
+              "ssot__RequestDateTime__c": "2026-03-13T19:38:16.000Z",
+              "ssot__PersonalizationDecisionId__c": "9pb1Q000000PAtbQAG",
+              "ssot__Id__c": "3972dfd9-bf5e-438f-b4a2-b020ecc0448b:1",
+              "ssot__PersonalizationPointId__c": "9pp1Q000000PAtWQAW"
+            }
+          ],
+          "CategoryBrowseEngagement__dlm": [
+            {
+              "CreatedDate__c": "2026-03-13T19:38:13.000Z",
+              "EngagementType__c": "category",
+              "DataSource__c": "NTO_Website_Behavioral_Events_B6AA47F",
+              "Id__c": "888852e1-0d39-4984-84fe-c9cab13f5f44",
+              "IndividualId__c": "0378420dabbac2b1",
+              "CategoryId__c": "kids"
+            },
+            {
+              "CreatedDate__c": "2026-03-13T19:38:13.000Z",
+              "EngagementType__c": "category",
+              "DataSource__c": "NTO_Website_Behavioral_Events_B6AA47F",
+              "Id__c": "4cb91878-490c-44d7-83bb-a452cb3018ac",
+              "IndividualId__c": "0378420dabbac2b1",
+              "CategoryId__c": "toddlers"
+            },
+            {
+              "CreatedDate__c": "2026-03-13T19:38:13.000Z",
+              "EngagementType__c": "category",
+              "DataSource__c": "NTO_Website_Behavioral_Events_B6AA47F",
+              "Id__c": "b59f10b2-f481-48fa-92fd-4f2149e76b94",
+              "IndividualId__c": "0378420dabbac2b1",
+              "CategoryId__c": "kids|toddlers"
+            }
+          ],
+          "ssot__ProductBrowseEngagement__dlm": [
+            {
+              "ssot__CreatedDate__c": "2026-03-13T19:38:22.000Z",
+              "ssot__EngagementChannelActionId__c": "View Catalog Object",
+              "ssot__EngagementTypeId__c": "catalog",
+              "ssot__EngagementDateTm__c": "2026-03-13T19:38:22.000Z",
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__ProductId__c": "1010756",
+              "ssot__Id__c": "f455c925-517e-45d1-af8e-2c7a1fc46fd8",
+              "ssot__DataSourceId__c": "NTO_Website_Behavioral_Events_B6AA47F"
+            },
+            {
+              "ssot__CreatedDate__c": "2026-03-13T19:38:16.000Z",
+              "ssot__EngagementChannelActionId__c": "View Catalog Object",
+              "ssot__EngagementTypeId__c": "catalog",
+              "ssot__EngagementDateTm__c": "2026-03-13T19:38:16.000Z",
+              "ssot__IndividualId__c": "0378420dabbac2b1",
+              "ssot__ProductId__c": "3010499",
+              "ssot__Id__c": "746695e9-d40b-41b0-9671-9e6934743b91",
+              "ssot__DataSourceId__c": "NTO_Website_Behavioral_Events_B6AA47F"
             }
           ]
         }
       ]
     }
   ],
-  "Individual_Unified_SM_1714394613851__dlm": [
+  "count_of_product_clicks_last_5_min__cio": [
     {
-      "Delta_Type__c": "new",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs0000004MUz",
-      "Timestamp__c": "2024-09-16T16:17:17.268Z"
-    },
+      "count_of_product_clicks__c": 2,
+      "window_end_createddate__c": "2026-03-13T19:39:59.000Z",
+      "window_start_createddate__c": "2026-03-13T19:35:00.000Z",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
+    }
+  ],
+  "Count_of_Product_Clicks_last_10_minutes__cio": [
     {
-      "Delta_Type__c": "existing",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs000000uD7R",
-      "Timestamp__c": "2025-04-27T21:20:33.856Z"
-    },
-    {
-      "Delta_Type__c": "existing",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs000000OLcn",
-      "Timestamp__c": "2024-12-29T22:01:56.666Z"
-    },
-    {
-      "Delta_Type__c": "existing",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs0000004KOL",
-      "Timestamp__c": "2024-09-10T19:47:25.221Z"
-    },
-    {
-      "Delta_Type__c": "existing",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs000001ESof",
-      "Timestamp__c": "2025-12-18T06:24:37.560Z"
-    },
-    {
-      "Delta_Type__c": "existing",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs000000rEGA",
-      "Timestamp__c": "2025-02-18T19:36:07.732Z"
-    },
-    {
-      "Delta_Type__c": "existing",
-      "Id__c": "0edc8b6f91bc1000e8b0a23298ea1fa0",
-      "Segment_Id__c": "1sgWs000000wtIf",
-      "Timestamp__c": "2025-06-19T19:31:46.133Z"
+      "count_of_product_clicks__c": 2,
+      "window_end_createddate__c": "2026-03-13T19:39:59.000Z",
+      "window_start_createddate__c": "2026-03-13T19:35:00.000Z",
+      "data_graph_dimension__c": "c29ac236bc95ba4bfad8b90ab33560a2"
     }
   ]
 }
