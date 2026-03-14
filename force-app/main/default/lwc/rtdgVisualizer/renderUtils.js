@@ -165,6 +165,48 @@ export async function renderConfig(profile, config) {
     return html;
 }
 
+/**
+ * Formats a timestamp as relative time or date based on user's timezone
+ * @param {String} timestamp - ISO timestamp string
+ * @returns {String} Formatted time string
+ */
+function formatTimestamp(timestamp) {
+    if (!timestamp) return '-';
+
+    const date = new Date(timestamp);
+    const now = new Date();
+
+    // Get start of today in user's timezone
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    // Check if the timestamp is from today
+    if (date >= todayStart) {
+        // Calculate difference in milliseconds
+        const diffMs = now - date;
+        const diffMinutes = Math.floor(diffMs / (1000 * 60));
+        const diffHours = Math.floor(diffMinutes / 60);
+        const remainingMinutes = diffMinutes % 60;
+
+        if (diffHours === 0) {
+            return `${diffMinutes} minute${diffMinutes !== 1 ? 's' : ''} ago`;
+        } else if (remainingMinutes === 0) {
+            return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ago`;
+        } else {
+            return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ${remainingMinutes} minute${remainingMinutes !== 1 ? 's' : ''} ago`;
+        }
+    } else {
+        // Format date in user's timezone
+        const options = {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        return date.toLocaleString(undefined, options);
+    }
+}
+
 function renderEngagement(profile, engagementConfig) {
     let allRows = [];
 
@@ -201,7 +243,7 @@ function renderEngagement(profile, engagementConfig) {
                         <p>${row.detail}</p>
                     </span>
                     <span aria-hidden="true">
-                        ${row.timestamp.split('T')[0]}<br/>${row.timestamp.split('T')[1].split('.')[0]}
+                        ${formatTimestamp(row.timestamp)}
                     </span>
                 </div>
             </li>
