@@ -234,8 +234,9 @@ function renderEngagement(profile, engagementConfig) {
             const title = row[item.fields.title];
             const detail = row[item.fields.detail];
             const label = item.label;
+            const color = item.color || 'gray';
 
-            return { timestamp, title, detail, label };
+            return { timestamp, title, detail, label, color };
         }));
     }
 
@@ -254,7 +255,8 @@ function renderEngagement(profile, engagementConfig) {
         const formattedTime = formatTimestamp(row.timestamp);
         html += `
             <li class="slds-item">
-                <div class="slds-grid slds-p-bottom_medium">
+                <div class="slds-grid slds-p-bottom_medium" style="position: relative;">
+                    <div style="width: 4px; background-color: ${row.color}; border-radius: 1.5px;" class="slds-m-right_medium"></div>
                     <span class="slds-badge slds-text-align_left slds-m-right_medium" style="min-width: 100px; padding: 0.25rem 0.5rem;">
                         <div style="line-height: 1.2;">
                             <div style="font-size: 0.75rem; font-weight: bold;">${formattedTime.date}</div>
