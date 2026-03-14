@@ -241,7 +241,7 @@ function renderEngagement(profile, engagementConfig) {
     }
 
     // Sort all rows by timestamp
-    allRows.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    allRows.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
     allRows = allRows.slice(0, engagementConfig.maxRows || 20);
 
