@@ -1,16 +1,15 @@
 <template>
     <div class="visualizer-container">
         <lightning-card title={componentTitle} icon-name="custom:custom63">
+            <lightning-button-icon
+                slot="actions"
+                icon-name="utility:refresh"
+                alternative-text="Execute Flow"
+                title="Execute Flow"
+                onclick={handleExecuteClick}
+                disabled={isLoading}>
+            </lightning-button-icon>
             <div class="slds-p-around_medium">
-                <!-- Execute Button -->
-                <div class="slds-m-bottom_medium">
-                    <lightning-button
-                        label="Execute Flow"
-                        variant="brand"
-                        onclick={handleExecuteClick}
-                        disabled={isLoading}>
-                    </lightning-button>
-                </div>
 
                 <!-- Loading Spinner -->
                 <template if:true={isLoading}>

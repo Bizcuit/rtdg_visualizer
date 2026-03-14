@@ -121,7 +121,7 @@ export async function renderConfig(profile, config) {
     for (const item of config) {
 
         if (item.type === 'separator') {
-            html += `<hr class="slds-m-vertical_large"/>`;
+            html += `<hr class="slds-m-vertical_medium"/>`;
             continue;
         }
 
@@ -213,7 +213,6 @@ function renderEngagement(profile, engagementConfig) {
     return html;
 }
 
-
 async function renderSegments(rows, sectionLabel) {
     if (rows.length === 0) return "";
 
@@ -298,7 +297,7 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
     }
 
     // render each row with a progress bar
-    return rows.map(row => {
+    return '<div class="slds-p-bottom_medium">' + rows.map(row => {
         const dimensionValue = row[dimensionField];
         const affinityValue = row[affinityField];
         const normalizedAffinity = maxAffinity > 0 ? affinityValue / maxAffinity : 0;
@@ -306,7 +305,7 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
         if (!dimensionValue) return "";
 
         return renderProgressBar(dimensionValue, affinityValue, normalizedAffinity);
-    }).join(' ');
+    }).join(' ') + '</div>';
 }
 
 function renderProgressBar(label, affinityValue, normalizedValue) {
