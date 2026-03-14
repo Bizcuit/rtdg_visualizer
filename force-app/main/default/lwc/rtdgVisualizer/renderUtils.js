@@ -3,6 +3,10 @@
  */
 import getSegmentName from '@salesforce/apex/DataCloudSegmentHelper.getSegmentName';
 
+export function getTestConfig(){
+    return testConfig;
+} 
+
 const testConfig = [
     {
         "type": "attribute",
@@ -14,7 +18,9 @@ const testConfig = [
         "label": "Person Name",
         "path": "ssot__PersonName__c"
     },
-    { "type": "separator" },
+    {
+        "type": "separator"
+    },
     {
         "type": "affinity",
         "path": "RT_Interactions_By_Product__cio",
@@ -23,7 +29,9 @@ const testConfig = [
         "affinityField": "interactioncount__c",
         "maxRows": 10
     },
-    { "type": "separator" },
+    {
+        "type": "separator"
+    },
     {
         "type": "affinity",
         "path": "RT_Interactions_By_Category__cio",
@@ -32,11 +40,13 @@ const testConfig = [
         "affinityField": "interactionscount__c",
         "maxRows": 20
     },
-    { "type": "separator" },
+    {
+        "type": "separator"
+    },
     {
         "type": "segments",
         "path": "Individual_Unified_SM_1714394613851__dlm",
-        "sectionLabel": "Segment Memberships",
+        "sectionLabel": "Segment Memberships"
     },
     {
         "type": "table",
@@ -53,9 +63,9 @@ const testConfig = [
             }
         ]
     },
-
     {
         "type": "engagement",
+        "maxRows": 20,
         "items": [
             {
                 "label": "Product Browse",
@@ -74,7 +84,7 @@ const testConfig = [
                     "title": "CategoryId__c",
                     "detail": "EngagementType__c"
                 }
-            },
+            }
         ]
     }
 ];
@@ -100,85 +110,11 @@ function getNodesByPath(obj, path) {
     return currentNodes;
 }
 
-export function renderEngagement(profile, engagementConfig) {
-    let allRows = [];
 
-    for (const item of engagementConfig.items) {
-        const rows = getNodesByPath(profile, item.path);
+export async function renderConfig(profile, config) {
+    console.log('Rendering config with profile:', profile, config);
 
-        allRows.push(...rows.map(row => {
-            const timestamp = row[item.fields.timestamp];
-            const title = row[item.fields.title];
-            const detail = row[item.fields.detail];
-            const label = item.label;
-
-            return { timestamp, title, detail, label };
-        }));
-    }
-
-    // Sort all rows by timestamp
-    allRows.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-    console.log('Engagement rows to render:', allRows);
-
-    // Render the engagements in a timeline format
-    let html = `
-        <h3 class="slds-text-heading_small slds-m-bottom_medium"><strong>Engagement Timeline</strong></h3>
-        <ul class="slds-timeline slds-m-bottom_medium">`;
-
-
-    for (const row of allRows) {
-        html += `
-        <li>
-            <div class="slds-timeline__item_expandable slds-timeline__item_task">
-                <span class="slds-assistive-text">task</span>
-                <div class="slds-media">
-                    <div class="slds-media__figure">
-                        <button class="slds-button slds-button_icon"
-                            title="Toggle details for Review proposals for EBC deck with larger team and have marketing review this"
-                            aria-controls="task-item-base-65">
-                            <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
-                            </svg>
-                            <span class="slds-assistive-text">${row.label}: ${row.title}</span>
-                        </button>
-                        <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon" title="task">
-                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="slds-media__body">
-                        <div class="slds-grid slds-grid_align-spread">
-                            <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
-
-                                <h3 class="slds-truncate">
-                                    <strong>${row.label}:</strong> ${row.title}
-                                </h3>
-
-                            </div>
-                            <div class="slds-timeline__actions slds-timeline__actions_inline">
-                                <p class="slds-timeline__date">${row.timestamp}</p>
-                            </div>
-                        </div>
-                        <p class="">
-                            ${row.detail}
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </li>        
-        `
-    }
-
-    html += `</ul>`;
-
-    return html;
-}
-
-export async function renderConfig(profile, config = testConfig) {
-    if (!config || config.length === 0) config = testConfig;//return ""
+    if (!config?.length || !profile) return "";
 
     let html = "";
 
@@ -228,6 +164,55 @@ export async function renderConfig(profile, config = testConfig) {
 
     return html;
 }
+
+function renderEngagement(profile, engagementConfig) {
+    let allRows = [];
+
+    for (const item of engagementConfig.items) {
+        const rows = getNodesByPath(profile, item.path);
+
+        allRows.push(...rows.map(row => {
+            const timestamp = row[item.fields.timestamp];
+            const title = row[item.fields.title];
+            const detail = row[item.fields.detail];
+            const label = item.label;
+
+            return { timestamp, title, detail, label };
+        }));
+    }
+
+    // Sort all rows by timestamp
+    allRows.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+    allRows = allRows.slice(0, engagementConfig.maxRows || 20);
+
+    // Render the engagements in a timeline format
+    let html = `
+        <h3 class="slds-text-heading_small slds-m-bottom_medium"><strong>Engagement Timeline</strong></h3>
+        <div class="slds-p-left_medium">
+        <ul class="slds-bottom-space slds-list_dotted">`;
+
+    for (const row of allRows) {
+        html += `
+            <li class="slds-item">
+                <div class="slds-grid slds-grid_align-spread slds-p-bottom_medium">
+                    <span>
+                        <p><strong>${row.label}:</strong> ${row.title}</p>
+                        <p>${row.detail}</p>
+                    </span>
+                    <span aria-hidden="true">
+                        ${row.timestamp.split('T')[0]}<br/>${row.timestamp.split('T')[1].split('.')[0]}
+                    </span>
+                </div>
+            </li>
+        `
+    }
+
+    html += `</ul></div>`;
+
+    return html;
+}
+
 
 async function renderSegments(rows, sectionLabel) {
     if (rows.length === 0) return "";
@@ -324,8 +309,7 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
     }).join(' ');
 }
 
-// Add rendering methods here
-export function renderProgressBar(label, affinityValue, normalizedValue) {
+function renderProgressBar(label, affinityValue, normalizedValue) {
     const percentage = Math.round(normalizedValue * 100);
 
     return `

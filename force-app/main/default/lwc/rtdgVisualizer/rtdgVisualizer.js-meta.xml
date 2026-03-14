@@ -9,21 +9,24 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage">
-            <property name="componentConfig" type="String" label="Component Config"
-                      description="JSON configuration for the component (e.g., {&quot;outputVariableName&quot;: &quot;result&quot;})"
-                      required="true"/>
+            <property name="componentTitle" type="String" label="Component Title"
+                      description="Title to display at the top of the component"
+                      default="RTDG Visualizer"/>
+
             <property name="selectedDataGraph" type="String" label="Select Data Graph"
                       description="Select the Real-Time Data Graph to use"
                       datasource="apex://DataGraphPicklist"
                       required="true"/>
             <property name="lookupKey" type="String" label="Lookup Key"
                       description="Lookup key value to pass to the flow. Use {!record_id} as a placeholder for the current record ID."/>
-            <property name="componentTitle" type="String" label="Component Title"
-                      description="Title to display at the top of the component"
-                      default="RTDG Visualizer"/>
+
+            <property name="componentConfig" type="String" label="Component Config"
+                      description="JSON configuration for the component (e.g., {&quot;outputVariableName&quot;: &quot;result&quot;})"
+                      required="true"/>
+
             <property name="autoExecute" type="Boolean" label="Auto Execute on Load"
                       description="Automatically execute the flow when component loads"
-                      default="false"/>
+                      default="true"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

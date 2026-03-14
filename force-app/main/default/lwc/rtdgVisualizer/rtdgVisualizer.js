@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import executeFlowAndGetOutput from '@salesforce/apex/FlowExecutionController.executeFlowAndGetOutput';
 import getDataSpaceApiName from '@salesforce/apex/DataGraphHelper.getDataSpaceApiName';
-import { renderConfig } from './renderUtils';
+import { renderConfig, getTestConfig } from './renderUtils';
 
 export default class RtdgVisualizer extends LightningElement {
     // Configuration parameters
@@ -41,8 +41,9 @@ export default class RtdgVisualizer extends LightningElement {
         try {
             if (this.componentConfig) {
                 this.config = JSON.parse(this.componentConfig);
+                // this.config = getTestConfig();
             } else {
-                this.config = {};
+                this.config = getTestConfig();
             }
         } catch (e) {
             this.error = 'Invalid JSON configuration: ' + e.message;
@@ -82,14 +83,12 @@ export default class RtdgVisualizer extends LightningElement {
                 outputVariableName: this.FLOW_OUTPUT_VAR,
                 inputVariables: inputVariables
             });
-            
 
             if(!this.flowResult) return "";
            
             const profile = JSON.parse(this.flowResult)?.[0];
-            
-            this.htmlResult = await renderConfig(profile);
-            this.template.querySelector('.container').innerHTML = this.htmlResult;
+
+            this.template.querySelector('.container').innerHTML = await renderConfig(profile, this.config);
         } catch (error) {
             this.errorMessage = error.body?.message || error.message || 'An error occurred while executing the flow';
         } finally {
