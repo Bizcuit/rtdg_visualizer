@@ -70,6 +70,7 @@ const testConfig = [
             {
                 "label": "Product Browse",
                 "path": "IndividualIdentityLink__dlm.ssot__Individual__dlm.ssot__ProductBrowseEngagement__dlm",
+                "color": "green",
                 "fields": {
                     "timestamp": "ssot__EngagementDateTm__c",
                     "title": "ssot__EngagementChannelActionId__c",
@@ -79,6 +80,7 @@ const testConfig = [
             {
                 "label": "Category Browse",
                 "path": "IndividualIdentityLink__dlm.ssot__Individual__dlm.CategoryBrowseEngagement__dlm",
+                "color:": "blue",
                 "fields": {
                     "timestamp": "CreatedDate__c",
                     "title": "CategoryId__c",
@@ -168,10 +170,10 @@ export async function renderConfig(profile, config) {
 /**
  * Formats a timestamp as relative time or date based on user's timezone
  * @param {String} timestamp - ISO timestamp string
- * @returns {String} Formatted time string
+ * @returns {Object} Object with date and time properties for display
  */
 function formatTimestamp(timestamp) {
-    if (!timestamp) return '-';
+    if (!timestamp) return { date: '-', time: '' };
 
     const date = new Date(timestamp);
     const now = new Date();
@@ -188,22 +190,36 @@ function formatTimestamp(timestamp) {
         const remainingMinutes = diffMinutes % 60;
 
         if (diffHours === 0) {
-            return `${diffMinutes} minute${diffMinutes !== 1 ? 's' : ''} ago`;
+            return {
+                date: `${diffMinutes} min${diffMinutes !== 1 ? 's' : ''}`,
+                time: 'ago'
+            };
         } else if (remainingMinutes === 0) {
-            return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ago`;
+            return {
+                date: `${diffHours} hour${diffHours !== 1 ? 's' : ''}`,
+                time: 'ago'
+            };
         } else {
-            return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ${remainingMinutes} minute${remainingMinutes !== 1 ? 's' : ''} ago`;
+            return {
+                date: `${diffHours}h ${remainingMinutes}m`,
+                time: 'ago'
+            };
         }
     } else {
-        // Format date in user's timezone
-        const options = {
+        // Format date and time separately in user's timezone
+        const dateOptions = {
             year: 'numeric',
             month: 'short',
-            day: 'numeric',
+            day: 'numeric'
+        };
+        const timeOptions = {
             hour: '2-digit',
             minute: '2-digit'
         };
-        return date.toLocaleString(undefined, options);
+        return {
+            date: date.toLocaleDateString(undefined, dateOptions),
+            time: date.toLocaleTimeString(undefined, timeOptions)
+        };
     }
 }
 
@@ -231,19 +247,23 @@ function renderEngagement(profile, engagementConfig) {
     // Render the engagements in a timeline format
     let html = `
         <h3 class="slds-text-heading_small slds-m-bottom_medium"><strong>Engagement Timeline</strong></h3>
-        <div class="slds-p-left_medium">
-        <ul class="slds-bottom-space slds-list_dotted">`;
+        <div class="">
+        <ul class="slds-bottom-space">`;
 
     for (const row of allRows) {
+        const formattedTime = formatTimestamp(row.timestamp);
         html += `
             <li class="slds-item">
-                <div class="slds-grid slds-grid_align-spread slds-p-bottom_medium">
+                <div class="slds-grid slds-p-bottom_medium">
+                    <span class="slds-badge slds-text-align_left slds-m-right_medium" style="min-width: 100px; padding: 0.25rem 0.5rem;">
+                        <div style="line-height: 1.2;">
+                            <div style="font-size: 0.75rem; font-weight: bold;">${formattedTime.date}</div>
+                            <div style="font-size: 0.7rem;">${formattedTime.time}</div>
+                        </div>
+                    </span>
                     <span>
                         <p><strong>${row.label}:</strong> ${row.title}</p>
                         <p>${row.detail}</p>
-                    </span>
-                    <span aria-hidden="true">
-                        ${formatTimestamp(row.timestamp)}
                     </span>
                 </div>
             </li>
