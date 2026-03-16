@@ -3,9 +3,9 @@
  */
 import getSegmentName from '@salesforce/apex/DataCloudSegmentHelper.getSegmentName';
 
-export function getTestConfig(){
+export function getTestConfig() {
     return testConfig;
-} 
+}
 
 const testConfig = [
     {
@@ -298,6 +298,11 @@ async function renderSegments(rows, sectionLabel) {
         {
             label: 'Status',
             property: 'Delta_Type__c'
+        },
+        {
+            label: 'Timestamp',
+            property: 'Timestamp__c',
+            type: 'datetime'
         }
     ], sectionLabel);
 
@@ -308,7 +313,15 @@ function renderTable(rows, columns, sectionLabel) {
 
     const header = columns.map(col => `<th scope="col">${col.label}</th>`).join('');
     const body = rows.map(row => {
-        const cells = columns.map(col => `<td>${row[col.property] || '-'}</td>`).join('');
+        const cells = columns.map(col => {
+            let value = row[col.property] || '-';
+
+            if (col.type === 'datetime') {
+                const formatted = formatTimestamp(row[col.property]);
+                value = `${formatted.date} ${formatted.time}`;
+            }
+            return `<td>${value}</td>`
+        }).join('');
         return `<tr>${cells}</tr>`;
     }).join('');
 
@@ -331,15 +344,50 @@ function renderAttributes(rows, label) {
 
     const value = rows[0]; // Just take the first value for simplicity
     return `
-    <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small">
-        <span>${label}</span>
-        <span aria-hidden="true">
+    <div class="slds-grid slds-p-bottom_x-small">
+        <span class="slds-col slds-size_1-of-3">${label}:</span>
+        <span class="slds-col">
             <strong>${value}</strong>
         </span>
     </div>`;
 }
 
 function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
+    // sort rows by affinity value
+    rows.sort((a, b) => {
+        return b[affinityField] - a[affinityField];
+    });
+
+    let displayRows = [];
+
+    if (rows.length > maxRows) {
+        // Keep top maxRows
+        displayRows = rows.slice(0, maxRows);
+
+        // Aggregate remaining rows
+        const remainingRows = rows.slice(maxRows);
+
+        let otherAffinityValue = 0;
+        let otherAffinityItems = 0;
+
+        for (const row of remainingRows) {
+            otherAffinityValue += row[affinityField] || 0;
+            otherAffinityItems++;
+        }
+
+        // Add OTHER entry if there are remaining rows
+        if (otherAffinityValue > 0) {
+            const otherRow = {
+                [dimensionField]: `Others `+ (otherAffinityItems > 1 ? `(${otherAffinityItems} items)` : ''),
+                [affinityField]: otherAffinityValue,
+                "isRemaining": true
+            };
+            displayRows.push(otherRow);
+        }
+    } else {
+        displayRows = rows;
+    }
+
     // find max affinity value for scaling
     let maxAffinity = 0;
     for (const row of rows) {
@@ -349,30 +397,28 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
         }
     }
 
-    maxAffinity = maxAffinity * 1.10; // add 10% padding to max value for better visualization
-
-    // sort rows by affinity value
-    rows.sort((a, b) => {
-        return b[affinityField] - a[affinityField];
-    });
-
-    if (rows.length > maxRows) {
-        rows = rows.slice(0, maxRows);
-    }
+    // add 10% padding to max value for better visualization
+    maxAffinity = maxAffinity * 1.10; 
 
     // render each row with a progress bar
-    return '<div class="slds-p-bottom_medium">' + rows.map(row => {
+    return '<div class="slds-p-bottom_medium">' + displayRows.map(row => {
         const dimensionValue = row[dimensionField];
         const affinityValue = row[affinityField];
         const normalizedAffinity = maxAffinity > 0 ? affinityValue / maxAffinity : 0;
 
         if (!dimensionValue) return "";
 
-        return renderProgressBar(dimensionValue, affinityValue, normalizedAffinity);
+        return renderProgressBar(dimensionValue, affinityValue, normalizedAffinity, row.isRemaining);
     }).join(' ') + '</div>';
 }
 
-function renderProgressBar(label, affinityValue, normalizedValue) {
+function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
+    if (!label) return "";
+
+    if(normalizedValue > 1) {
+        normalizedValue = 1;
+    }
+
     const percentage = Math.round(normalizedValue * 100);
 
     return `
@@ -383,8 +429,8 @@ function renderProgressBar(label, affinityValue, normalizedValue) {
             <strong>${affinityValue}</strong>
             </span>
         </div>
-        <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
-            <span class="slds-progress-bar__value" style="width:${percentage}%">
+        <div class="slds-progress-bar ${isRemaining ? 'slds-progress-bar_small' : ''}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
+            <span class="slds-progress-bar__value" style="width:${percentage}%; ${isRemaining ? 'background-color: #888888;' : ''}" >
             <span class="slds-assistive-text" id="progress-bar-label-id-6">${affinityValue}</span>
             </span>
         </div>
