@@ -378,7 +378,7 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
         // Add OTHER entry if there are remaining rows
         if (otherAffinityValue > 0) {
             const otherRow = {
-                [dimensionField]: `Others `+ (otherAffinityItems > 1 ? `(${otherAffinityItems} items)` : ''),
+                [dimensionField]: `Others ` + (otherAffinityItems > 1 ? `(${otherAffinityItems} items)` : ''),
                 [affinityField]: otherAffinityValue,
                 "isRemaining": true
             };
@@ -398,7 +398,7 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
     }
 
     // add 10% padding to max value for better visualization
-    maxAffinity = maxAffinity * 1.10; 
+    maxAffinity = maxAffinity * 1.10;
 
     // render each row with a progress bar
     return '<div class="slds-p-bottom_medium">' + displayRows.map(row => {
@@ -415,7 +415,7 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
 function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
     if (!label) return "";
 
-    if(normalizedValue > 1) {
+    if (normalizedValue > 1) {
         normalizedValue = 1;
     }
 
