@@ -33,22 +33,18 @@ Follow these detailed steps to install this project on your Salesforce org:
    - Authenticate with your Salesforce org: `sf org login web --alias myorg`
    - Replace `myorg` with a suitable alias for your org.
 
-6. **Create a Scratch Org (Optional)**:
-   - If using a scratch org for development: `sf org create scratch --definition-file config/project-scratch-def.json --alias scratchorg --set-default`
-   - This creates a fresh org based on the provided definition.
-
-7. **Deploy the Source Code**:
+6. **Deploy the Source Code**:
    - Deploy all components to your org: `sf project deploy start`
    - Alternatively, deploy specific metadata: `sf project deploy start --source-dir force-app`
 
-8. **Assign Permissions**:
+7. **Assign Permissions**:
    - Ensure users have the necessary permissions to access the LWC and Flows. This may involve creating permission sets or profiles with access to custom objects, Apex classes, and Lightning components.
 
-9. **Configure the Component**:
+8. **Configure the Component**:
     - Add the `rtdgVisualizer` LWC to a Lightning page or app in your org via the Lightning App Builder.
     - Configure any required parameters or data sources as per your implementation needs. Use [Configurator App](https://bizcuit.github.io/rtdg_visualizer/index.html) to create a configuration for the component.
 
-10. **Verify Installation**:
+9. **Verify Installation**:
     - Log in to your Salesforce org and navigate to the page where the visualizer is embedded.
     - Test the functionality by interacting with the data graph visualization.
 
