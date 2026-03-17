@@ -1,10 +1,10 @@
-# RTDG Visualizer
+# Salesforce Data Cloud Data Graph Visualizer
 
 This Salesforce DX project provides a Real-Time Data Graph (RTDG) visualizer component and related utilities for Salesforce orgs. 
 
 ## This components supports visualizing:
    - Calculated Insightes as Affinities
-   - Tables of data
+   - Tabular data from CIs or DMOs
    - Engagement DMOs
    - Direct attributes
 
