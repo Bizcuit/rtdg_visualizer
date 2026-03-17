@@ -2,30 +2,6 @@
 
 This Salesforce DX project provides a Real-Time Data Graph (RTDG) visualizer component and related utilities for Salesforce orgs.
 
-## Package Contents
-
-The following objects are included in this package:
-
-### Apex Classes
-- **DataCloudSegmentHelper.cls**: Provides helper methods for managing Data Cloud segments, enabling data segmentation and filtering capabilities within the visualizer.
-- **DataGraphHelper.cls**: Contains utility functions for handling Data Graph operations, such as querying and processing graph data structures.
-- **DataGraphPicklist.cls**: Manages picklist values related to Data Graphs, ensuring consistent data selection options in flows and components.
-- **FlowExecutionController.cls**: Acts as a controller for executing Salesforce Flows, facilitating automated processes triggered by the visualizer.
-- **FlowPicklist.cls**: Handles picklist configurations for Flows, supporting dynamic flow selections based on user inputs.
-
-### Flows
-- **dgLookup.flow**: A Salesforce Flow that performs lookups on Data Graphs, allowing users to search and retrieve graph-related data interactively.
-
-### Lightning Web Components (LWCs)
-- **rtdgVisualizer**: The main Lightning Web Component that renders the Real-Time Data Graph visualization, including HTML template, JavaScript logic, CSS styling, and metadata configuration. This component is essential for displaying interactive data graphs in Lightning pages.
-
-### Scripts
-- **hello.apex**: A sample Apex script demonstrating basic Apex functionality, useful for testing and development purposes.
-- **account.soql**: A sample SOQL query for retrieving Account records, provided as an example for data querying in the project.
-
-### Configuration Files
-- **project-scratch-def.json**: Defines the scratch org configuration, specifying features, settings, and data required for development and testing environments.
-
 ## Installation
 
 Follow these detailed steps to install this project on your Salesforce org:
@@ -36,7 +12,7 @@ Follow these detailed steps to install this project on your Salesforce org:
    - Set up a Salesforce Developer Edition org or use an existing sandbox/production org.
 
 2. **Clone or Download the Project**:
-   - Clone this repository to your local machine: `git clone <repository-url>`
+   - Clone this repository to your local machine: `git clone https://github.com/Bizcuit/rtdg_visualizer.git`
    - Or download the ZIP file and extract it to a local directory.
 
 3. **Navigate to the Project Directory**:
@@ -57,18 +33,36 @@ Follow these detailed steps to install this project on your Salesforce org:
    - Deploy all components to your org: `sf project deploy start`
    - Alternatively, deploy specific metadata: `sf project deploy start --source-dir force-app`
 
-8. **Run Tests**:
-   - Execute Apex tests to ensure everything is working: `sf apex run test --tests DataCloudSegmentHelperTest,DataGraphHelperTest --result-format human --code-coverage`
-
-9. **Assign Permissions**:
+8. **Assign Permissions**:
    - Ensure users have the necessary permissions to access the LWC and Flows. This may involve creating permission sets or profiles with access to custom objects, Apex classes, and Lightning components.
 
-10. **Configure the Component**:
+9. **Configure the Component**:
     - Add the `rtdgVisualizer` LWC to a Lightning page or app in your org via the Lightning App Builder.
-    - Configure any required parameters or data sources as per your implementation needs.
+    - Configure any required parameters or data sources as per your implementation needs. Use [Configurator App](https://bizcuit.github.io/rtdg_visualizer/index.html) to create a configuration for the component.
 
-11. **Verify Installation**:
+10. **Verify Installation**:
     - Log in to your Salesforce org and navigate to the page where the visualizer is embedded.
     - Test the functionality by interacting with the data graph visualization.
 
 For more information, refer to the [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev).
+
+
+## Package Contents
+
+The following objects are included in this package:
+
+### Apex Classes
+- **DataCloudSegmentHelper.cls**: Provides helper methods for managing Data Cloud segments, enabling data segmentation and filtering capabilities within the visualizer.
+- **DataGraphHelper.cls**: Contains utility functions for handling Data Graph operations, such as querying and processing graph data structures.
+- **DataGraphPicklist.cls**: Manages picklist values related to Data Graphs, ensuring consistent data selection options in flows and components.
+- **FlowExecutionController.cls**: Acts as a controller for executing Salesforce Flows, facilitating automated processes triggered by the visualizer.
+- **FlowPicklist.cls**: Handles picklist configurations for Flows, supporting dynamic flow selections based on user inputs.
+
+### Flows
+- **dgLookup.flow**: A Salesforce Flow that performs lookups on Data Graphs, allowing users to search and retrieve graph-related data interactively.
+
+### Lightning Web Components (LWCs)
+- **rtdgVisualizer**: The main Lightning Web Component that renders the Real-Time Data Graph visualization, including HTML template, JavaScript logic, CSS styling, and metadata configuration. This component is essential for displaying interactive data graphs in Lightning pages.
+
+### Configuration Files
+- **project-scratch-def.json**: Defines the scratch org configuration, specifying features, settings, and data required for development and testing environments.
