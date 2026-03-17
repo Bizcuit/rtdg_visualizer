@@ -2,11 +2,11 @@
 
 This Salesforce DX project provides a Real-Time Data Graph (RTDG) visualizer component and related utilities for Salesforce orgs. 
 
-This components supports visualizing:
-    - Calculated Insightes as Affinities
-    - Tables of data
-    - Engagement DMOs
-    - Direct attributes
+## This components supports visualizing:
+   - Calculated Insightes as Affinities
+   - Tables of data
+   - Engagement DMOs
+   - Direct attributes
 
 ![Component in action](example.png)
 
