@@ -21,6 +21,7 @@ export default class RtdgVisualizer extends LightningElement {
     error;
     isLoading = false;
     config = {};
+    showRawOutput = false;
 
     connectedCallback() {
         this.parseConfig();
@@ -99,8 +100,21 @@ export default class RtdgVisualizer extends LightningElement {
         this.executeFlowHandler();
     }
 
+    handleToggleRawOutput() {
+        this.showRawOutput = !this.showRawOutput;
+    }
+
     get hasResult() {
         return this.flowResult !== null && this.flowResult !== undefined;
+    }
+
+    get formattedFlowResult() {
+        if (!this.flowResult) return '';
+        try {
+            return JSON.stringify(JSON.parse(this.flowResult), null, 2);
+        } catch (e) {
+            return this.flowResult;
+        }
     }
 
     get hasError() {

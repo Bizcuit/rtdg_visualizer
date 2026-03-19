@@ -2,6 +2,15 @@
     <div class="visualizer-container">
         <lightning-card title={componentTitle} icon-name="custom:custom63">
             <lightning-button-icon
+                class="slds-m-right_medium"
+                slot="actions"
+                icon-name="utility:insert_tag_field"
+                alternative-text="Toggle Raw Output"
+                title="Toggle Raw Output"
+                onclick={handleToggleRawOutput}
+                variant={showRawOutput}>
+            </lightning-button-icon>
+            <lightning-button-icon
                 slot="actions"
                 icon-name="utility:refresh"
                 alternative-text="Execute Flow"
@@ -24,6 +33,20 @@
                             <h2>{error}</h2>
                         </div>
                     </div>
+                </template>
+
+                <!-- Raw Flow Output -->
+                <template if:true={showRawOutput}>
+                    <template if:true={hasResult}>
+                        <div class="slds-m-bottom_medium">
+                            <textarea
+                                class="slds-textarea"
+                                readonly
+                                style="font-family: monospace; font-size: 0.75rem; height: 250px; resize: vertical; background-color: #f3f3f3; outline: none; border: 1px solid #d8dde6; border-radius: 4px; box-shadow: none; padding: 0.7rem;">
+                                {formattedFlowResult}
+                            </textarea>
+                        </div>
+                    </template>
                 </template>
 
                 <div class="container" lwc:dom="manual"></div>

@@ -231,8 +231,8 @@ function renderEngagement(profile, engagementConfig) {
 
         allRows.push(...rows.map(row => {
             const timestamp = row[item.fields.timestamp];
-            const title = row[item.fields.title];
-            const detail = row[item.fields.detail];
+            const title = item?.fields?.title ? row[item.fields.title] : '';
+            const detail = item?.fields?.detail ? row[item.fields.detail] : '';
             const label = item.label;
             const color = item.color || 'gray';
 
@@ -264,8 +264,8 @@ function renderEngagement(profile, engagementConfig) {
                         </div>
                     </span>
                     <span>
-                        <p><strong>${row.label}:</strong> ${row.title}</p>
-                        <p>${row.detail}</p>
+                        <p><strong>${row.label}</strong></p>
+                        <p>${row.title} - ${row.detail}</p>
                     </span>
                 </div>
             </li>
