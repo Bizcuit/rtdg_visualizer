@@ -18,6 +18,7 @@
                 onclick={handleExecuteClick}
                 disabled={isLoading}>
             </lightning-button-icon>
+            
             <div class="slds-p-around_medium">
 
                 <!-- Loading Spinner -->
@@ -42,7 +43,7 @@
                             <textarea
                                 class="slds-textarea"
                                 readonly
-                                style="font-family: monospace; font-size: 0.75rem; height: 250px; resize: vertical; background-color: #f3f3f3; outline: none; border: 1px solid #d8dde6; border-radius: 4px; box-shadow: none; padding: 0.7rem;">
+                                style="font-family: monospace; font-size: 0.75rem; height: 250px; resize: vertical; background-color: #f3f3f3; outline: none; border: 1px solid #d8dde6; border-radius: 4px; box-shadow: none; padding: 0.7rem;  white-space: pre; overflow-wrap: normal; overflow-x: scroll;">
                                 {formattedFlowResult}
                             </textarea>
                         </div>

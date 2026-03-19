@@ -8,7 +8,7 @@ export default class RtdgVisualizer extends LightningElement {
     @api componentConfig;
     @api selectedDataGraph;
     @api lookupKey;
-    @api componentTitle = 'Data Graph Visualizer';
+    @api componentTitle = ''; 
     @api recordId; // Current record ID (automatically available on record pages)
 
     // Static flow API name
