@@ -8,8 +8,7 @@ export default class RtdgVisualizer extends LightningElement {
     @api componentConfig;
     @api selectedDataGraph;
     @api lookupKey;
-    @api componentTitle = 'RTDG Visualizer';
-    @api autoExecute = false;
+    @api componentTitle = 'Data Graph Visualizer';
     @api recordId; // Current record ID (automatically available on record pages)
 
     // Static flow API name
@@ -26,7 +25,7 @@ export default class RtdgVisualizer extends LightningElement {
     connectedCallback() {
         this.parseConfig();
 
-        if (this.autoExecute && this.selectedDataGraph && this.FLOW_OUTPUT_VAR) {
+        if (this.selectedDataGraph && this.lookupKey) {
             this.executeFlowHandler();
         }
     }

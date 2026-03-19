@@ -2,21 +2,27 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>62.0</apiVersion>
     <isExposed>true</isExposed>
+
+    <masterLabel>Data Graph Visualizer</masterLabel>
+    
+    <description>This component allows users to visualize data graphs.</description>
+
     <targets>
         <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
         <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage,lightning__FlowScreen">
             <property name="componentTitle" type="String" label="Component Title"
                       description="Title to display at the top of the component"
-                      default="RT Profile"/>
+                      default="Data Graph Visualizer"/>
 
             <property name="selectedDataGraph" type="String" label="Select Data Graph"
                       description="Select the Real-Time Data Graph to use"
-                      datasource="apex://DataGraphPicklist"
                       required="true"/>
+                      
             <property name="lookupKey" type="String" label="Lookup Key"
                       default="IndividualIdentityLink__dlm.SourceRecordId__c=RECORD_ID"
                       description="DG Lookup key value to pass to the flow. Use RECORD_ID as a placeholder for the current record ID."/>
@@ -24,10 +30,6 @@
             <property name="componentConfig" type="String" label="Component Config"
                       description="JSON configuration for the component (e.g., {&quot;outputVariableName&quot;: &quot;result&quot;})"
                       required="true"/>
-
-            <property name="autoExecute" type="Boolean" label="Auto Execute on Load"
-                      description="Automatically execute the flow when component loads"
-                      default="true"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
