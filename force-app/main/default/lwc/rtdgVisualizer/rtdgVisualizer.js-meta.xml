@@ -26,7 +26,7 @@
                       description="DG Lookup key value to pass to the flow. Use RECORD_ID as a placeholder for the current record ID."/>
 
             <property name="componentConfig" type="String" label="Component Config"
-                      description="JSON configuration for the component (e.g., {&quot;outputVariableName&quot;: &quot;result&quot;})"
+                      description="Use https://bizcuit.github.io/rtdg_visualizer/ to create a JSON config for the component"
                       required="true"/>
         </targetConfig>
 
@@ -44,7 +44,7 @@
                       description="DG Lookup key value to pass to the flow. Use RECORD_ID as a placeholder for the current record ID."/>
 
             <property name="componentConfig" type="String" label="Component Config"
-                      description="JSON configuration for the component (e.g., {&quot;outputVariableName&quot;: &quot;result&quot;})"
+                      description="Use https://bizcuit.github.io/rtdg_visualizer/ to create a JSON config for the component"
                       required="true"/>
         </targetConfig>
     </targetConfigs>
