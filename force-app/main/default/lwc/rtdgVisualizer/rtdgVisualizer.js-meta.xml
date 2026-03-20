@@ -27,6 +27,7 @@
 
             <property name="componentConfig" type="String" label="Component Config"
                       description="Use https://bizcuit.github.io/rtdg_visualizer/ to create a JSON config for the component"
+                      default="[]"
                       required="true"/>
         </targetConfig>
 
@@ -45,6 +46,7 @@
 
             <property name="componentConfig" type="String" label="Component Config"
                       description="Use https://bizcuit.github.io/rtdg_visualizer/ to create a JSON config for the component"
+                      default="[]"
                       required="true"/>
         </targetConfig>
     </targetConfigs>

@@ -426,12 +426,12 @@ function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
         <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" id="progress-bar-label-id-6">
             <span>${label || '-'}</span>
             <span aria-hidden="true">
-            <strong>${affinityValue}</strong>
+            <strong>${affinityValue.toFixed(2)}</strong>
             </span>
         </div>
         <div class="slds-progress-bar ${isRemaining ? 'slds-progress-bar_small' : ''}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
             <span class="slds-progress-bar__value" style="width:${percentage}%; ${isRemaining ? 'background-color: #888888;' : ''}" >
-            <span class="slds-assistive-text" id="progress-bar-label-id-6">${affinityValue}</span>
+            <span class="slds-assistive-text" id="progress-bar-label-id-6">${affinityValue.toFixed(2)}</span>
             </span>
         </div>
     </div>`
