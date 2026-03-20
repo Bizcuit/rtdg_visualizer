@@ -73,12 +73,6 @@
             <extensionName>c:rtdgVisualizer</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>componentConfig</name>
-                <value>
-                    <stringValue>[{&quot;type&quot;:&quot;segments&quot;,&quot;path&quot;:&quot;Individual_Unified_SM_1714394613851__dlm&quot;,&quot;sectionLabel&quot;:&quot;Segment Membership&quot;},{&quot;type&quot;:&quot;affinity&quot;,&quot;path&quot;:&quot;RT_Interactions_By_Category__cio&quot;,&quot;sectionLabel&quot;:&quot;Category Affinities&quot;,&quot;dimensionField&quot;:&quot;categoryid__c&quot;,&quot;affinityField&quot;:&quot;interactionscount__c&quot;,&quot;maxRows&quot;:10},{&quot;type&quot;:&quot;engagement&quot;,&quot;maxRows&quot;:20,&quot;items&quot;:[{&quot;label&quot;:&quot;Product Engagement&quot;,&quot;color&quot;:&quot;#0EA5E9&quot;,&quot;path&quot;:&quot;IndividualIdentityLink__dlm.ssot__Individual__dlm.ssot__ProductBrowseEngagement__dlm&quot;,&quot;fields&quot;:{&quot;timestamp&quot;:&quot;ssot__EngagementDateTm__c&quot;,&quot;title&quot;:&quot;ssot__EngagementChannelActionId__c&quot;,&quot;detail&quot;:&quot;ssot__ProductId__c&quot;}},{&quot;label&quot;:&quot;Category Engagement&quot;,&quot;color&quot;:&quot;#EF4444&quot;,&quot;path&quot;:&quot;IndividualIdentityLink__dlm.ssot__Individual__dlm.CategoryBrowseEngagement__dlm&quot;,&quot;fields&quot;:{&quot;timestamp&quot;:&quot;CreatedDate__c&quot;,&quot;title&quot;:&quot;CategoryId__c&quot;,&quot;detail&quot;:&quot;EngagementType__c&quot;}}]}]</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
                 <name>selectedDataGraph</name>
                 <value>
                     <stringValue>RealtimeProfile</stringValue>
@@ -88,6 +82,12 @@
                 <name>lookupKey</name>
                 <value>
                     <stringValue>IndividualIdentityLink__dlm.SourceRecordId__c={!Individual}</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>componentConfig</name>
+                <value>
+                    <stringValue>[]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
