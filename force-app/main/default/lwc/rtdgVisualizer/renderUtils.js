@@ -368,9 +368,11 @@ function renderAttributes(rows, label) {
     const value = rows[0]; // Just take the first value for simplicity
     return `
     <div class="slds-grid slds-p-bottom_x-small">
-        <span class="slds-col slds-size_1-of-3">${label}:</span>
-        <span class="slds-col">
-            <strong>${value}</strong>
+        <span class="slds-col slds-size_1-of-4 one-line-text" title="${label}">
+            ${label}:
+        </span>
+        <span class="slds-col" title="${value}">
+            <strong class="one-line-text">${value}</strong>
         </span>
     </div>`;
 }
