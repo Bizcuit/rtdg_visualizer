@@ -36,8 +36,8 @@
                       description="Title to display at the top of the component"
                       default="Data Graph Visualizer"/>
 
-            <property name="selectedDataGraph" type="String" label="Select Data Graph"
-                      description="Select the Real-Time Data Graph to use"
+            <property name="selectedDataGraph" type="String" label="Data Graph API Name"
+                      description="Set the API name of the Real-Time Data Graph to visualize"
                       required="true"/>
                       
             <property name="lookupKey" type="String" label="Lookup Key"

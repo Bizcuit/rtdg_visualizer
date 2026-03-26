@@ -2,11 +2,14 @@
 
 This Salesforce DX project provides a Real-Time Data Graph (RTDG) visualizer component and related utilities for Salesforce orgs. 
 
+## Disclamer
+This is an open source product that is not an offical feature of Salesforce Data Cloud. 
+
 ## This components supports visualizing:
-   - Calculated Insightes as Affinities
-   - Tabular data from CIs or DMOs
-   - Engagement DMOs
    - Direct attributes
+   - Calculated Insightes as Affinities
+   - Engagement DMOs
+   - Tabular data from CIs or DMOs
 
 ![Component in action](example.png)
 
@@ -18,6 +21,9 @@ Follow these detailed steps to install this project on your Salesforce org:
    - Ensure you have Node.js installed (version 14 or later).
    - Install the Salesforce CLI by running: `npm install -g @salesforce/cli`
    - Set up a Salesforce Developer Edition org or use an existing sandbox/production org.
+   - Create a Profile Data Graph and make sure that all properties you would like to visualize are available there
+   - Make sure that identity resolution rules are configured
+   - If you are plannning to use this component on a record page, eg: Contact Record Page, make sure that Contact records are sent to Data Cloud and that Identity Resolution Rules are configured for those records
 
 2. **Clone or Download the Project**:
    - Clone this repository to your local machine: `git clone https://github.com/Bizcuit/rtdg_visualizer.git`
@@ -41,8 +47,12 @@ Follow these detailed steps to install this project on your Salesforce org:
    - Ensure users have the necessary permissions to access the LWC and Flows. This may involve creating permission sets or profiles with access to custom objects, Apex classes, and Lightning components.
 
 8. **Configure the Component**:
-    - Add the `rtdgVisualizer` LWC to a Lightning page or app in your org via the Lightning App Builder.
-    - Configure any required parameters or data sources as per your implementation needs. Use [Configurator App](https://bizcuit.github.io/rtdg_visualizer/index.html) to create a configuration for the component.
+    - Add the `rtdgVisualizer` LWC to a Lightning page or app in your org via the Lightning App Builder and open comopnent properties
+    - Set the mandotory value of the "Data Graph API Name" parameter. Component will visualize data from this data graph
+    - Check and (if required) modify the "Lookup Key" parameter. The value of this parameter depends on the identidy resolution rules you have configured. The standard OOTB value for this paramter is "IndividualIdentityLink__dlm.SourceRecordId__c=RECORD_ID" which should work with standard IR rules that were defined without additional Prefixes in Data Cloud. "RECORD_ID" substring is automatically replaced with the current record ID of the current page.
+    - Set mandatory value of the "Components Config" parameter. The value for this parameter is a JSON object. Use [Configurator App](https://bizcuit.github.io/rtdg_visualizer/index.html) to generate the value for this parameter.
+    - Optionaly set the value of the "Component Title" parameter
+
 
 9. **Verify Installation**:
     - Log in to your Salesforce org and navigate to the page where the visualizer is embedded.
