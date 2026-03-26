@@ -256,16 +256,15 @@ function renderEngagement(profile, engagementConfig) {
         html += `
             <li class="slds-item">
                 <div class="slds-grid slds-p-bottom_medium" style="position: relative;">
-                    <div style="width: 4px; background-color: ${row.color}; border-radius: 1.5px;" class="slds-m-right_medium"></div>
-                    <span class="slds-badge slds-text-align_left slds-m-right_medium" style="min-width: 100px; padding: 0.25rem 0.5rem;">
+                    <span class="slds-badge slds-text-align_left slds-m-right_medium" style="min-width: 100px; padding: 0.25rem 0.5rem; border-left: 4px solid ${row.color};">
                         <div style="line-height: 1.2;">
                             <div style="font-size: 0.75rem; font-weight: bold;">${formattedTime.date}</div>
                             <div style="font-size: 0.7rem;">${formattedTime.time}</div>
                         </div>
                     </span>
                     <span>
-                        <p><strong>${row.label}</strong></p>
-                        <p>${row.title} - ${row.detail}</p>
+                        <p class="one-line-text" title="${row.label}"><strong>${row.label}</strong></p>
+                        <p class="one-line-text" title="${row.title} - ${row.detail}">${row.title} - ${row.detail}</p>
                     </span>
                 </div>
             </li>
@@ -290,22 +289,46 @@ async function renderSegments(rows, sectionLabel) {
         return 0;
     });
 
-    return renderTable(rows, [
-        {
-            label: 'Segment Name',
-            property: 'Segment_Name__c'
-        },
-        {
-            label: 'Status',
-            property: 'Delta_Type__c'
-        },
-        {
-            label: 'Timestamp',
-            property: 'Timestamp__c',
-            type: 'datetime'
-        }
-    ], sectionLabel);
+    let html = `
+        <h3 class="slds-text-heading_small slds-m-bottom_medium">
+            <strong>${sectionLabel || 'Segment Membership'}</strong>
+        </h3>
+        <div class="slds-m-bottom_medium">
+        <ul class="slds-bottom-space">`;
 
+    for (const row of rows) {
+        const formattedTime = formatTimestamp(row.Timestamp__c);
+
+        const color = row.Delta_Type__c === 'removed' ? 'red' : 'green';
+
+        html += `
+            <li class="slds-item">
+                <div class="slds-grid slds-p-bottom_medium" style="position: relative;">
+                    <div style="width: 4px; background-color: ${color}; border-radius: 1.5px;" class="slds-m-right_medium"></div>
+
+                    <!--span class="slds-badge slds-text-align_left slds-m-right_medium" style="min-width: 100px; padding: 0.25rem 0.5rem;">
+                        <div style="line-height: 1.2;">
+                            <div style="font-size: 0.75rem; font-weight: bold;">${formattedTime.date}</div>
+                            <div style="font-size: 0.7rem;">${formattedTime.time}</div>
+                        </div>
+                    </span-->
+                    
+                    <span>
+                        <p>
+                            <a href="/lightning/r/MarketSegment/${row.Segment_Id__c}/view" target="_blank">
+                                <strong>${row.Segment_Name__c}</strong>
+                            </a>
+                        </p>
+                        <p><strong>${row.Delta_Type__c}</strong>: ${formattedTime.date} ${formattedTime.time}</p>
+                    </span>
+                </div>
+            </li>
+        `
+    }
+
+    html += `</ul></div>`;
+
+    return html;
 }
 
 function renderTable(rows, columns, sectionLabel) {

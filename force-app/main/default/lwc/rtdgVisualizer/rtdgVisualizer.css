@@ -21,3 +21,12 @@
     background-color: #ffffff;
     border-left: 3px solid #0176d3;
 }
+
+.one-line-text {
+    overflow: hidden;
+    word-break: break-all;
+    display: -webkit-box;
+    line-clamp: 1; 
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
