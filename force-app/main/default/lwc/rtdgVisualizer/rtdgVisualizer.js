@@ -20,7 +20,7 @@ export default class RtdgVisualizer extends LightningElement {
     htmlResult;
     error;
     isLoading = false;
-    config = {};
+    config = [];
     showRawOutput = false;
 
     connectedCallback() {
@@ -41,13 +41,14 @@ export default class RtdgVisualizer extends LightningElement {
         try {
             if (this.componentConfig) {
                 this.config = JSON.parse(this.componentConfig);
-                // this.config = getTestConfig();
-            } else {
-                this.config = getTestConfig();
             }
         } catch (e) {
             this.error = 'Invalid JSON configuration: ' + e.message;
             console.error('Error parsing component config:', e);
+        }
+
+        if(!this.config?.length){
+            this.showRawOutput = true;
         }
     }
 
