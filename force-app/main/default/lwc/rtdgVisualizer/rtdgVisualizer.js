@@ -76,8 +76,6 @@ export default class RtdgVisualizer extends LightningElement {
                 dgLookupKey: this.lookupKey.replace("RECORD_ID", this.recordId)
             };
 
-            console.log('Input variables being passed to flow:', JSON.stringify(inputVariables));
-
             // Execute the flow with the dataspace as input
             this.flowResult = await executeFlowAndGetOutput({
                 flowApiName: this.FLOW_API_NAME,
@@ -85,13 +83,18 @@ export default class RtdgVisualizer extends LightningElement {
                 inputVariables: inputVariables
             });
 
-            if(!this.flowResult) return "";
+            if(!this.flowResult) throw new Error(`Flow did not return any result. Please check if the flow executed successfully and returned a value in the variable ${this.FLOW_OUTPUT_VAR}.`);
            
-            const profile = JSON.parse(this.flowResult)?.[0];
+            const response = JSON.parse(this.flowResult);
+
+            if(response?.error) throw new Error(`Data Graph Lookup failed with error: ${response.error}, Query: ${response?.query || ''}`);
+
+            const profile = response?.[0];
 
             this.template.querySelector('.container').innerHTML = await renderConfig(profile, this.config);
+
         } catch (error) {
-            this.errorMessage = error.body?.message || error.message || 'An error occurred while executing the flow';
+            this.error = error.body?.message || error.message || 'An error occurred while executing the flow';
         } finally {
             this.isLoading = false;
         }
