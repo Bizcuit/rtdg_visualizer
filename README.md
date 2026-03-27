@@ -14,7 +14,7 @@ This is an open source product that is not an offical feature of Salesforce Data
 
 ![Component in action](rtdgLookup.png)
 
-![Utility Component](rgdgLookupUtility.gif)
+![Utility Component](rtdgLookupUtility.gif)
 
 ## Installation
 
