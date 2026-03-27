@@ -78,7 +78,6 @@ The Config Builder is a visual web-based tool (`index.html`) that helps you crea
 1. **Get the Data Graph Preview**:
    - In Salesforce, go to **Data Cloud → Data Graphs**
    - Select your Data Graph and click **Preview**
-   - Execute a preview query with a known Individual ID
    - Copy the entire JSON-like output from the preview results
 
 2. **Paste the Schema**:
