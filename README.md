@@ -13,6 +13,8 @@ This is an open source product that is not an offical feature of Salesforce Data
 
 ![Component in action](example.png)
 
+![Utility Component](rgdgLookupUtility.gif)
+
 ## Installation
 
 Follow these detailed steps to install this project on your Salesforce org:
@@ -60,6 +62,102 @@ Follow these detailed steps to install this project on your Salesforce org:
 
 For more information, refer to the [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev).
 
+## Usage Instructions
+
+### Adding rtdgVisualizer to Contact or Lead Record Pages
+
+Follow these steps to add the Data Graph Visualizer to Contact or Lead record pages:
+
+1. **Navigate to Setup**:
+   - Log in to your Salesforce org
+   - Click on the gear icon (Setup) in the top right corner
+
+2. **Open Lightning App Builder**:
+   - In Quick Find, search for "Lightning App Builder"
+   - Click on "Lightning App Builder"
+
+3. **Edit the Record Page**:
+   - For Contact: Find "Contact Record Page" and click "Edit"
+   - For Lead: Find "Lead Record Page" and click "Edit"
+   - If you have multiple record pages, select the one you want to modify
+
+4. **Add the Component**:
+   - In the left sidebar, find the "Custom" components section
+   - Locate "Data Graph Visualizer" component
+   - Drag and drop it onto your desired location on the page (recommended: a new tab or prominent section)
+
+5. **Configure Component Properties**:
+   - With the component selected, configure the following in the right panel:
+     - **Component Title**: Enter a title (e.g., "Real-Time Profile")
+     - **Data Graph API Name**: Enter your Profile Data Graph API name (required)
+     - **Lookup Key**: Default value is `IndividualIdentityLink__dlm.SourceRecordId__c=RECORD_ID`
+       - Modify if your Identity Resolution rules use custom prefixes
+       - `RECORD_ID` will be automatically replaced with the current Contact/Lead record ID
+     - **Component Config**: Paste the JSON configuration generated from the [Configurator App](https://bizcuit.github.io/rtdg_visualizer/index.html) (required)
+
+6. **Save and Activate**:
+   - Click "Save"
+   - Click "Activate" (or "Save as the org default" if already activated)
+   - Choose activation options:
+     - For specific apps: Select the apps where this page should be active
+     - For specific profiles: Assign to specific user profiles
+     - Click "Save"
+
+7. **Test the Component**:
+   - Navigate to any Contact or Lead record
+   - Verify that the visualizer displays the Data Graph information
+   - Click the refresh button to reload data if needed
+
+### Adding rtdgVisualizerUtilityBar as a Utility Bar Item
+
+The Utility Bar version allows users to look up any Individual's data graph without being on a specific record page. Follow these steps to add it to an app (example: "Personalization" app):
+
+1. **Navigate to App Manager**:
+   - Go to Setup
+   - In Quick Find, search for "App Manager"
+   - Click on "App Manager"
+
+2. **Edit Your Lightning App**:
+   - Find the app where you want to add the utility item (e.g., "Personalization")
+   - Click the dropdown arrow next to the app name
+   - Select "Edit"
+
+3. **Navigate to Utility Items**:
+   - In the app setup screen, click on "Utility Items" in the left navigation menu
+   - Click "Add Utility Item"
+
+4. **Select the Component**:
+   - In the dropdown, select "Data Graph Visualizer - Utility Bar"
+   - Click "OK" or "Add"
+
+5. **Configure Component Properties**:
+   - **Label**: Enter a user-friendly label (e.g., "Profile Lookup")
+   - **Icon**: Choose an icon (e.g., "people")
+   - **Width**: Set to **480** (recommended for optimal display)
+   - **Height**: Set to 480 or adjust based on your needs
+   - **Data Graph API Name**: Enter your Profile Data Graph API name (required)
+   - **Lookup Key**: Default value is `IndividualIdentityLink__dlm.SourceRecordId__c=RECORD_ID`
+     - `RECORD_ID` will be replaced with the Individual ID entered by the user
+   - **Component Config**: Paste the JSON configuration from the [Configurator App](https://bizcuit.github.io/rtdg_visualizer/index.html) (required)
+
+6. **Optional Settings**:
+   - **Start automatically**: Toggle if you want the utility to open automatically when the app loads
+   - **Show in console navigation**: Enable if you want it visible in console apps
+
+7. **Save the App**:
+   - Click "Save" to save your changes
+
+8. **Test the Utility Item**:
+   - Navigate to the app where you added the utility (e.g., "Personalization")
+   - Look for the utility bar at the bottom of the screen
+   - Click on your new utility item (e.g., "Individual Lookup")
+   - The utility panel will open, prompting you to enter an Individual ID
+   - Enter a valid Individual ID and click "Lookup Individual"
+   - The Data Graph visualization will display
+   - Use the back button to change the Individual ID if needed
+
+**Note**: The recommended width of **480 pixels** ensures that the component has enough space to display data graphs without horizontal scrolling while maintaining a comfortable utility bar experience.
+
 
 ## Package Contents
 
@@ -68,15 +166,14 @@ The following objects are included in this package:
 ### Apex Classes
 - **DataCloudSegmentHelper.cls**: Provides helper methods for managing Data Cloud segments, enabling data segmentation and filtering capabilities within the visualizer.
 - **DataGraphHelper.cls**: Contains utility functions for handling Data Graph operations, such as querying and processing graph data structures.
-- **DataGraphPicklist.cls**: Manages picklist values related to Data Graphs, ensuring consistent data selection options in flows and components.
 - **FlowExecutionController.cls**: Acts as a controller for executing Salesforce Flows, facilitating automated processes triggered by the visualizer.
-- **FlowPicklist.cls**: Handles picklist configurations for Flows, supporting dynamic flow selections based on user inputs.
 
 ### Flows
 - **dgLookup.flow**: A Salesforce Flow that performs lookups on Data Graphs, allowing users to search and retrieve graph-related data interactively.
 
 ### Lightning Web Components (LWCs)
 - **rtdgVisualizer**: The main Lightning Web Component that renders the Real-Time Data Graph visualization, including HTML template, JavaScript logic, CSS styling, and metadata configuration. This component is essential for displaying interactive data graphs in Lightning pages.
+- **rtdgVisualizerUtilityBar**: A utility bar wrapper component that prompts users to enter an Individual ID before displaying the Data Graph visualization. Designed specifically for use in the Lightning Utility Bar, allowing users to look up any individual's profile data without being on a specific record page.
 
 ### Configuration Files
 - **project-scratch-def.json**: Defines the scratch org configuration, specifying features, settings, and data required for development and testing environments.
