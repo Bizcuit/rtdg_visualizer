@@ -5,6 +5,13 @@ Customizable Salesforce LWC component for visualizing Data Cloud Data Graphs. It
 ## Disclamer
 This is a private open source project. It is not an offical feature of Salesforce Data Cloud. 
 
+## Table of Contents
+[Intstallation](#installation)
+[Configuration Builder](#configuration-builder-tool)
+[Adding Contact or Lead Record Pages](#adding-contact-or-lead-record-pages)
+[Adding as a Utility Bar Item](#adding-as-a-utility-bar-item)
+[Package Contents](#package-contents)
+
 ## This components supports visualizing:
    - Direct attributes
    - Segment Membership
@@ -13,6 +20,7 @@ This is a private open source project. It is not an offical feature of Salesforc
    - Tabular data from CIs or DMOs
 
 ![Component in action](rtdgLookup.png)
+
 
 ## Installation
 
@@ -23,6 +31,7 @@ cd rtdg_visualizer
 sf org login web --alias org_rtdg_visualizer
 sf project deploy start -o org_rtdg_visualizer
 ```
+[Proceed with configuration](#configuration-builder-tool)
 
 ### Detailed installation
 
@@ -166,7 +175,7 @@ Add configuration items using the buttons provided. Each item type serves a diff
 
 ## Usage Instructions
 
-### Adding rtdgVisualizer to Contact or Lead Record Pages
+### Adding Contact or Lead Record Pages
 
 ![Page Builder UI](pageui.png)
 
@@ -212,7 +221,7 @@ Follow these steps to add the Data Graph Visualizer to Contact or Lead record pa
    - Verify that the visualizer displays the Data Graph information
    - Click the refresh button to reload data if needed
 
-### Adding rtdgVisualizerUtilityBar as a Utility Bar Item
+### Adding as a Utility Bar Item
 
 The Utility Bar version allows users to look up any Individual's data graph without being on a specific record page. Follow these steps to add it to an app (example: "Personalization" app):
 
