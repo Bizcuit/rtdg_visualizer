@@ -158,6 +158,8 @@ Add configuration items using the buttons provided. Each item type serves a diff
 
 ### Adding rtdgVisualizer to Contact or Lead Record Pages
 
+![Page Builder UI](pageui.png)
+
 Follow these steps to add the Data Graph Visualizer to Contact or Lead record pages:
 
 1. **Navigate to Setup**:
