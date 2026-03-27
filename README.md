@@ -6,9 +6,9 @@ Customizable Salesforce LWC component for visualizing Data Cloud Data Graphs. It
 This is a private open source project. It is not an offical feature of Salesforce Data Cloud. 
 
 ## Table of Contents
-   - [Intstallation](#installation)
+   - [Installation](#installation)
    - [Configuration Builder](#configuration-builder-tool)
-   - [Adding Contact or Lead Record Pages](#adding-contact-or-lead-record-pages)
+   - [Adding to Contact or Lead Record Pages](#adding-to-contact-or-lead-record-pages)
    - [Adding as a Utility Bar Item](#adding-as-a-utility-bar-item)
    - [Package Contents](#package-contents)
 
@@ -175,7 +175,7 @@ Add configuration items using the buttons provided. Each item type serves a diff
 
 ## Usage Instructions
 
-### Adding Contact or Lead Record Pages
+### Adding to Contact or Lead Record Pages
 
 ![Page Builder UI](pageui.png)
 
