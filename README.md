@@ -16,6 +16,14 @@ This is a private open source project. It is not an offical feature of Salesforc
 
 ## Installation
 
+### Quick Install (if you have SFDX installed)
+`git clone https://github.com/Bizcuit/rtdg_visualizer.git`
+`cd rtdg_visualizer`
+`sf org login web --alias org_rtdg_visualizer`
+`sf project deploy start -o org_rtdg_visualizer`
+
+### Detailed installation
+
 Follow these detailed steps to install this project on your Salesforce org:
 
 1. **Prerequisites**:
@@ -38,11 +46,11 @@ Follow these detailed steps to install this project on your Salesforce org:
 
 5. **Authorize Your Org**:
    - Authenticate with your Salesforce org: `sf org login web --alias myorg`
-   - Replace `myorg` with a suitable alias for your org.
+   - Replace `myorg` with a suitable alias for your org
 
 6. **Deploy the Source Code**:
-   - Deploy all components to your org: `sf project deploy start`
-   - Alternatively, deploy specific metadata: `sf project deploy start --source-dir force-app`
+   - Deploy all components to your org: `sf project deploy start -o myorg`
+   - Replace `myorg` with a suitable alias for your org
 
 7. **Assign Permissions**:
    - Ensure users have the necessary permissions to access the LWC and Flows. This may involve creating permission sets or profiles with access to custom objects, Apex classes, and Lightning components.
