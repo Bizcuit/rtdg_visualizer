@@ -466,6 +466,7 @@ function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
     }
 
     const percentage = Math.round(normalizedValue * 100);
+    const opacity = 0.3 + (normalizedValue * 0.7); // Ensure minimum opacity of 0.3 for better visibility
 
     return `
     <div class="slds-m-bottom_small">
@@ -476,7 +477,7 @@ function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
             </span>
         </div>
         <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
-            <span class="slds-progress-bar__value" style="width:${percentage}%; ${isRemaining ? 'background-color: #888888;' : ''}" >
+            <span class="slds-progress-bar__value" style="width:${percentage}%; opacity: ${opacity}; border-radius: 0 4px 4px 0; ${isRemaining ? 'background-color: #888888;' : ''}" >
             <span class="slds-assistive-text" id="progress-bar-label-id-6">${affinityValue.toFixed(2)}</span>
             </span>
         </div>
