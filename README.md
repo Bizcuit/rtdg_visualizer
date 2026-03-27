@@ -14,8 +14,6 @@ This is an open source product that is not an offical feature of Salesforce Data
 
 ![Component in action](rtdgLookup.png)
 
-![Utility Component](rtdgLookupUtility.gif)
-
 ## Installation
 
 Follow these detailed steps to install this project on your Salesforce org:
@@ -203,6 +201,8 @@ Follow these steps to add the Data Graph Visualizer to Contact or Lead record pa
 ### Adding rtdgVisualizerUtilityBar as a Utility Bar Item
 
 The Utility Bar version allows users to look up any Individual's data graph without being on a specific record page. Follow these steps to add it to an app (example: "Personalization" app):
+
+![Utility Component](rtdgLookupUtility.gif)
 
 1. **Navigate to App Manager**:
    - Go to Setup
