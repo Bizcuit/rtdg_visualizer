@@ -71,6 +71,8 @@ The Config Builder is a visual web-based tool (`index.html`) that helps you crea
 
 ### How to Use the Config Builder
 
+![Builder UI](builderui.png)
+
 #### Step 1: Load Your Data Graph Schema
 
 1. **Get the Data Graph Preview**:
