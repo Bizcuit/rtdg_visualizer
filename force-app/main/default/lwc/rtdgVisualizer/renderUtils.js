@@ -383,8 +383,8 @@ function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
     
     for (const row of rows) {
         const dimensionValue = row[dimensionField] || 'Unknown';
-        const affinityValue = row[affinityField] || 0;
-
+        const affinityValue = parseFloat(row[affinityField]) || 0;
+        
         if (!aggregated[dimensionValue]) {
             aggregated[dimensionValue] = 0;
         }
@@ -473,7 +473,7 @@ function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
         <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" id="progress-bar-label-id-6">
             <span>${label || '-'}</span>
             <span aria-hidden="true">
-            <strong>${affinityValue.toFixed(2)}</strong>
+            <strong>${affinityValue?.toFixed(2)}</strong>
             </span>
         </div>
         <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
