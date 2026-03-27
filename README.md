@@ -1,6 +1,6 @@
 # Salesforce Data Cloud Data Graph Visualizer
 
-This Salesforce DX project provides a Real-Time Data Graph (RTDG) visualizer component and related utilities for Salesforce orgs. 
+Customizable Salesforce LWC component for visualizing Data Cloud Data Graphs. It surfaces deep customer insights on core records and provides a fast, searchable interface for data lookups across the platform.
 
 ## Disclamer
 This is a private open source project. It is not an offical feature of Salesforce Data Cloud. 
