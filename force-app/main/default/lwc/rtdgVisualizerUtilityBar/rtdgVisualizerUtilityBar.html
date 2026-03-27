@@ -1,0 +1,50 @@
+<template>
+    <div class="utility-bar-wrapper">
+        <!-- Input Form - Show when Individual ID not provided -->
+        <template if:false={showVisualizer}>
+            <lightning-card>
+                <div class="slds-p-around_medium">
+                    <div class="slds-m-bottom_medium">
+                        Data Graph: <strong>{selectedDataGraph}</strong>
+                    </div>
+                    <lightning-input
+                        label="Individual ID"
+                        value={individualId}
+                        onchange={handleIndividualIdChange}
+                        placeholder="Enter Individual ID"
+                        required>
+                    </lightning-input>
+                    <div class="slds-m-top_medium">
+                        <lightning-button
+                            variant="brand"
+                            label="Lookup Inidividual"
+                            onclick={handleSubmit}
+                            disabled={isSubmitDisabled}>
+                        </lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- Visualizer Component - Show when Individual ID is provided -->
+        <template if:true={showVisualizer}>
+            <div class="visualizer-wrapper">
+                <lightning-button-icon
+                    icon-name="utility:back"
+                    alternative-text="Change Individual ID"
+                    title="Change Individual ID"
+                    onclick={handleReset}
+                    class="reset-button slds-m-around_x-small">
+                </lightning-button-icon>
+
+                <c-rtdg-visualizer
+                    component-title=""
+                    selected-data-graph={selectedDataGraph}
+                    lookup-key={targetLookupKey}
+                    component-config={componentConfig}
+                    record-id={recordIdToPass}>
+                </c-rtdg-visualizer>
+            </div>
+        </template>
+    </div>
+</template>

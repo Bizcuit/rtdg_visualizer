@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <masterLabel>Data Graph Visualizer - Utility Bar</masterLabel>
+
+    <description>Utility bar wrapper for Data Graph Visualizer that prompts for Individual ID</description>
+
+    <targets>
+        <target>lightning__UtilityBar</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__UtilityBar">
+            <property name="selectedDataGraph" type="String" label="Data Graph API Name"
+                      description="Set the API name of the Real-Time Data Graph to visualize"
+                      required="true"/>
+
+            <property name="lookupKey" type="String" label="Lookup Key"
+                      default="IndividualIdentityLink__dlm.SourceRecordId__c=RECORD_ID"
+                      description="DG Lookup key value. Use RECORD_ID as a placeholder for the Individual ID."/>
+
+            <property name="componentConfig" type="String" label="Component Config"
+                      description="Use https://bizcuit.github.io/rtdg_visualizer/ to create a JSON config for the component"
+                      default="[]"
+                      required="true"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
