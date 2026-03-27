@@ -7,11 +7,12 @@ This is an open source product that is not an offical feature of Salesforce Data
 
 ## This components supports visualizing:
    - Direct attributes
+   - Segment Membership
    - Calculated Insightes as Affinities
    - Engagement DMOs
    - Tabular data from CIs or DMOs
 
-![Component in action](example.png)
+![Component in action](rtdgLookup.png)
 
 ![Utility Component](rgdgLookupUtility.gif)
 
@@ -61,6 +62,98 @@ Follow these detailed steps to install this project on your Salesforce org:
     - Test the functionality by interacting with the data graph visualization.
 
 For more information, refer to the [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev).
+
+## Configuration Builder Tool
+
+### What is the Config Builder?
+
+The Config Builder is a visual web-based tool (`index.html`) that helps you create the JSON configuration required by the rtdgVisualizer component. Instead of manually writing JSON, you can use this tool to visually build your configuration with an intuitive drag-and-drop interface.
+
+**Access the tool**: Open `index.html` in your browser, or use the hosted version at [https://bizcuit.github.io/rtdg_visualizer/](https://bizcuit.github.io/rtdg_visualizer/)
+
+### How to Use the Config Builder
+
+#### Step 1: Load Your Data Graph Schema
+
+1. **Get the Data Graph Preview**:
+   - In Salesforce, go to **Data Cloud → Data Graphs**
+   - Select your Data Graph and click **Preview**
+   - Execute a preview query with a known Individual ID
+   - Copy the entire JSON-like output from the preview results
+
+2. **Paste the Schema**:
+   - In the Config Builder, paste the JSON into the "Input Schema: Data Graph Preview" textarea
+   - Click **Load Schema**
+   - The schema panel will collapse, confirming the schema was loaded successfully
+
+#### Step 2: Build Your Configuration
+
+Add configuration items using the buttons provided. Each item type serves a different purpose:
+
+**Available Configuration Types**:
+
+- **Attribute**: Display a single field from your Data Graph
+  - **Label**: The display name for this attribute
+  - **Path**: The field path in the Data Graph (use Browse to select)
+  - *Example*: Display a person's name or email address
+
+- **Affinity**: Visualize Calculated Insights as affinity scores by dimension
+  - **Section Label**: Title for this section
+  - **Path**: Path to the Calculated Insight representing affinity data
+  - **Dimension Field**: Field containing the dimension name (e.g., "Category__c")
+  - **Affinity Field**: Field containing the metric value / affinity (e.g., "Affinity__c")
+  - **Max Rows**: Maximum number of dimensions to display
+  - *Example*: Show top 10 product categories by affinity score
+
+- **Segments**: Display Data Cloud segments that the individual belongs to
+  - **Section Label**: Title for this section
+  - **Path**: Path to the segments array
+  - *Example*: Show which audience segments the person is in
+
+- **Table**: Display tabular data from arrays in your Data Graph
+  - **Section Label**: Title for this section
+  - **Path**: Path to the array of data
+  - **Columns**: Define each column with a label and property name
+  - *Example*: Display a list of orders with date, amount, and status
+
+- **Engagement**: Visualize engagement Data Model Objects (DMOs) as a timeline
+  - **Max Rows**: Maximum number of engagement records to display
+  - **Items**: Add multiple engagement types (e.g., Email Opens, Page Views, Product Views)
+    - **Label**: Display name for this engagement type
+    - **Color**: Visual color for this engagement type (choose from palette)
+    - **Path**: Path to the engagement DMO array (e.g., Product Browse Engagement)
+    - **Fields**: Map the timestamp, title, and detail fields
+  - *Example*: Show email opens, clicks, and website visits on a timeline
+
+- **Separator**: Add a visual divider between sections
+
+#### Step 3: Configure Each Item
+
+1. **Use the Browse Button**: Click "Browse" next to any path field to open an interactive tree view of your Data Graph schema
+   - Search for fields using the search box
+   - Click to expand/collapse nodes
+   - Select a path and click "Select"
+
+2. **Fill in Field Details**: For items like Affinity, Table, and Engagement, you'll need to specify which fields to display
+   - The tool automatically detects available fields based on the path you selected
+   - Use dropdowns to select fields when available
+
+3. **Reorder Items**: Use the up/down arrows or drag-and-drop to reorder your configuration items
+
+#### Step 4: Export Configuration
+
+1. **Review Output**: The "Output JSON" panel shows your configuration in real-time
+2. **Copy to Clipboard**: Click "Copy to Clipboard" to get minified JSON ready for Salesforce
+3. **Download JSON**: Click "Download JSON" to save the configuration file
+4. **Paste into Component**: Use the copied JSON as the value for the "Component Config" parameter in your rtdgVisualizer component
+
+### Tips for Using the Config Builder
+
+- **Start with the schema**: Always load your Data Graph schema first before adding configuration items
+- **Use Browse for accuracy**: The Browse button helps you avoid typos in field paths
+- **Test incrementally**: Build and test your configuration with one or two items first, then add more
+- **Save your work**: Download your JSON configuration so you can import it later if needed
+- **Reuse configurations**: Import previously saved configurations using the "Import JSON" button
 
 ## Usage Instructions
 
