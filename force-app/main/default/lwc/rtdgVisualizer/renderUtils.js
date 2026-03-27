@@ -378,6 +378,27 @@ function renderAttributes(rows, label) {
 }
 
 function renderAffinities(rows, dimensionField, affinityField, maxRows = 10) {
+    // aggregate rows by dimension field and sum affinity values
+    const aggregated = {};
+    
+    for (const row of rows) {
+        const dimensionValue = row[dimensionField] || 'Unknown';
+        const affinityValue = row[affinityField] || 0;
+
+        if (!aggregated[dimensionValue]) {
+            aggregated[dimensionValue] = 0;
+        }
+        aggregated[dimensionValue] += affinityValue;
+    }
+
+    // convert aggregated object back to array format for sorting and rendering
+    rows = Object.keys(aggregated).map(key => {
+        return {
+            [dimensionField]: key,
+            [affinityField]: aggregated[key]
+        };
+    });
+    
     // sort rows by affinity value
     rows.sort((a, b) => {
         return b[affinityField] - a[affinityField];
@@ -454,7 +475,7 @@ function renderProgressBar(label, affinityValue, normalizedValue, isRemaining) {
             <strong>${affinityValue.toFixed(2)}</strong>
             </span>
         </div>
-        <div class="slds-progress-bar ${isRemaining ? 'slds-progress-bar_small' : ''}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
+        <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percentage}" aria-labelledby="progress-bar-label-id-6" role="progressbar">
             <span class="slds-progress-bar__value" style="width:${percentage}%; ${isRemaining ? 'background-color: #888888;' : ''}" >
             <span class="slds-assistive-text" id="progress-bar-label-id-6">${affinityValue.toFixed(2)}</span>
             </span>
