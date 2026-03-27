@@ -3,7 +3,7 @@
 This Salesforce DX project provides a Real-Time Data Graph (RTDG) visualizer component and related utilities for Salesforce orgs. 
 
 ## Disclamer
-This is an open source product that is not an offical feature of Salesforce Data Cloud. 
+This is a private open source project. It is not an offical feature of Salesforce Data Cloud. 
 
 ## This components supports visualizing:
    - Direct attributes
