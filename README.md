@@ -17,10 +17,12 @@ This is a private open source project. It is not an offical feature of Salesforc
 ## Installation
 
 ### Quick Install (if you have SFDX installed)
-`git clone https://github.com/Bizcuit/rtdg_visualizer.git`
-`cd rtdg_visualizer`
-`sf org login web --alias org_rtdg_visualizer`
-`sf project deploy start -o org_rtdg_visualizer`
+```
+git clone https://github.com/Bizcuit/rtdg_visualizer.git
+cd rtdg_visualizer
+sf org login web --alias org_rtdg_visualizer
+sf project deploy start -o org_rtdg_visualizer
+```
 
 ### Detailed installation
 
