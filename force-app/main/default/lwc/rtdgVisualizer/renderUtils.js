@@ -293,8 +293,7 @@ async function renderSegments(rows, sectionLabel) {
         <h3 class="slds-text-heading_small slds-m-bottom_medium">
             <strong>${sectionLabel || 'Segment Membership'}</strong>
         </h3>
-        <div class="slds-m-bottom_medium">
-        <ul class="slds-bottom-space">`;
+        <div class="slds-m-bottom_medium slds-grid slds-wrap">`;
 
     for (const row of rows) {
         const formattedTime = formatTimestamp(row.Timestamp__c);
@@ -302,31 +301,20 @@ async function renderSegments(rows, sectionLabel) {
         const color = row.Delta_Type__c === 'removed' ? 'red' : 'green';
 
         html += `
-            <li class="slds-item">
-                <div class="slds-grid slds-p-bottom_medium" style="position: relative;">
-                    <div style="width: 4px; background-color: ${color}; border-radius: 1.5px;" class="slds-m-right_medium"></div>
-
-                    <!--span class="slds-badge slds-text-align_left slds-m-right_medium" style="min-width: 100px; padding: 0.25rem 0.5rem;">
-                        <div style="line-height: 1.2;">
-                            <div style="font-size: 0.75rem; font-weight: bold;">${formattedTime.date}</div>
-                            <div style="font-size: 0.7rem;">${formattedTime.time}</div>
-                        </div>
-                    </span-->
-                    
-                    <span>
-                        <p>
-                            <a href="/lightning/r/MarketSegment/${row.Segment_Id__c}/view" target="_blank">
-                                <strong>${row.Segment_Name__c}</strong>
-                            </a>
-                        </p>
-                        <p><strong>${row.Delta_Type__c}</strong>: ${formattedTime.date} ${formattedTime.time}</p>
-                    </span>
+            <div class="slds-col slds-has-flexi-truncate" style="min-width: 250px;">
+                <div class="slds-m-right_medium slds-m-bottom_medium slds-p-around_x-small slds-truncate" style="border-radius: 6px; border: 1px solid #DADADA; border-left: 4px solid ${color};">    
+                    <p>
+                        <a href="/lightning/r/MarketSegment/${row.Segment_Id__c}/view" target="_blank">
+                            <strong>${row.Segment_Name__c}</strong>
+                        </a>
+                    </p>
+                    <p><strong>${row.Delta_Type__c}</strong>: ${formattedTime.date} ${formattedTime.time}</p>
                 </div>
-            </li>
+            </div>
         `
     }
 
-    html += `</ul></div>`;
+    html += `</div>`;
 
     return html;
 }
