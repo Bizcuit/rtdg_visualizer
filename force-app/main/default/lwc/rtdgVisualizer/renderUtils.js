@@ -301,7 +301,7 @@ async function renderSegments(rows, sectionLabel) {
         const color = row.Delta_Type__c === 'removed' ? 'red' : 'green';
 
         html += `
-            <div class="slds-col slds-has-flexi-truncate" style="min-width: 250px;">
+            <div class="slds-col slds-has-flexi-truncate" style="min-width: 250px; max-width: 300px;">
                 <div class="slds-m-right_medium slds-m-bottom_medium slds-p-around_x-small slds-truncate" style="border-radius: 6px; border: 1px solid #DADADA; border-left: 4px solid ${color};">    
                     <p>
                         <a href="/lightning/r/MarketSegment/${row.Segment_Id__c}/view" target="_blank">
