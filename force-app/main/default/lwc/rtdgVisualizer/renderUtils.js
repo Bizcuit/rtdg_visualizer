@@ -322,6 +322,22 @@ async function renderSegments(rows, sectionLabel) {
 function renderTable(rows, columns, sectionLabel) {
     if (rows.length === 0) return "";
 
+    // Remove duplicates based on selected columns
+    const uniqueRows = [];
+    const seen = new Set();
+
+    for (const row of rows) {
+        // Create a key based on the values of all selected columns
+        const key = columns.map(col => row[col.property] || '').join('|');
+
+        if (!seen.has(key)) {
+            seen.add(key);
+            uniqueRows.push(row);
+        }
+    }
+
+    rows = uniqueRows;
+
     const header = columns.map(col => `<th scope="col">${col.label}</th>`).join('');
     const body = rows.map(row => {
         const cells = columns.map(col => {
