@@ -565,6 +565,7 @@
             <h2>Output JSON</h2>
             <textarea id="outputJson" readonly placeholder="Your configuration JSON will appear here..."></textarea>
             <div class="button-group">
+                <button id="saveButton" class="btn-primary" onclick="saveToParent()" style="display: none;">💾 Save to Platform</button>
                 <button class="btn-primary" onclick="copyToClipboard()">Copy to Clipboard</button>
                 <button class="btn-success" onclick="downloadJson()">Download JSON</button>
             </div>
@@ -1706,8 +1707,79 @@
             URL.revokeObjectURL(url);
         }
 
+        // Save to parent window (if opened from platform)
+        function saveToParent() {
+            if (!window.opener) {
+                alert('This window was not opened from the platform UI');
+                return;
+            }
+
+            if (configItems.length === 0) {
+                alert('No configuration to save');
+                return;
+            }
+
+            // Generate minified JSON
+            const minifiedJson = JSON.stringify(configItems.map(item => {
+                const outputItem = { type: item.type };
+
+                switch(item.type) {
+                    case 'attribute':
+                        outputItem.label = item.label || '';
+                        outputItem.path = item.path || '';
+                        break;
+                    case 'affinity':
+                        outputItem.path = item.path || '';
+                        outputItem.sectionLabel = item.sectionLabel || '';
+                        outputItem.dimensionField = item.dimensionField || '';
+                        outputItem.affinityField = item.affinityField || '';
+                        outputItem.maxRows = item.maxRows || 10;
+                        break;
+                    case 'segments':
+                        outputItem.path = item.path || '';
+                        outputItem.sectionLabel = item.sectionLabel || '';
+                        break;
+                    case 'table':
+                        outputItem.path = item.path || '';
+                        outputItem.sectionLabel = item.sectionLabel || '';
+                        outputItem.columns = item.columns || [];
+                        break;
+                    case 'engagement':
+                        outputItem.maxRows = item.maxRows || 20;
+                        outputItem.items = (item.items || []).map(engItem => ({
+                            label: engItem.label || '',
+                            color: engItem.color || PASTEL_COLORS[0],
+                            path: engItem.path || '',
+                            fields: engItem.fields || {}
+                        }));
+                        break;
+                    case 'separator':
+                        // No additional properties
+                        break;
+                }
+
+                return outputItem;
+            }));
+
+            // Post message to opener window
+            window.opener.postMessage({ config: minifiedJson }, '*');
+
+            alert('Configuration saved to platform!');
+        }
+
+        // Check if opened from platform UI and show save button
+        function checkOpenerAndShowSaveButton() {
+            if (window.opener) {
+                const saveButton = document.getElementById('saveButton');
+                if (saveButton) {
+                    saveButton.style.display = 'inline-block';
+                }
+            }
+        }
+
         // Initialize
         renderConfigItems();
+        checkOpenerAndShowSaveButton();
     </script>
 </body>
 </html>
